@@ -32,49 +32,113 @@
   <ellipse cx="400" cy="400" rx="290" ry="34" fill="#15151A" stroke="#C9A227" stroke-width="3"/>
   <ellipse cx="400" cy="392" rx="252" ry="26" fill="#1E1E24" stroke="#C9A227" stroke-width="2" stroke-opacity=".6"/>
 
-  <!-- 展示車両（Maserati GranTurismo／ビアンコアルピ：ロングノーズの流麗なファストバック） -->
-  <g>
-    <path d="M196 372
-             C192 371 190 368 189 364
-             L187 350
-             C186 344 186 338 188 333
-             C190 327 194 324 200 322
-             C214 318 232 315 252 313
-             C282 310 316 308 348 308
-             L358 307
-             C370 292 384 281 400 276
-             C412 272 424 271 436 273
-             C446 274 456 278 464 283
-             C482 292 500 302 516 311
-             C532 318 548 323 562 327
-             C576 330 592 333 606 337
-             C618 340 626 344 630 349
-             C633 355 633 362 629 367
-             C627 371 623 372 618 372
-             L578 372 A 38 38 0 0 0 502 372
-             L310 372 A 38 38 0 0 0 234 372 Z"
-          fill="#EFEDE6" stroke="#A8A496" stroke-width="3.5"/>
+  <!-- 展示車両（Maserati GranTurismo／ビアンコアルピ：リアル描画） -->
+  <defs>
+    <linearGradient id="gtBody" x1="0" y1="273" x2="0" y2="396" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFFFFF"/><stop offset=".22" stop-color="#F7F5EF"/>
+      <stop offset=".5" stop-color="#EFEDE6"/><stop offset=".78" stop-color="#CFCBBF"/><stop offset="1" stop-color="#A5A196"/>
+    </linearGradient>
+    <linearGradient id="gtGlass" x1="0" y1="276" x2="0" y2="313" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#5A6E84"/><stop offset=".5" stop-color="#22303E"/><stop offset="1" stop-color="#0C1319"/>
+    </linearGradient>
+    <radialGradient id="tireGS">
+  <stop offset=".55" stop-color="#131418"/>
+  <stop offset=".8" stop-color="#212329"/>
+  <stop offset=".93" stop-color="#0B0C0E"/>
+  <stop offset="1" stop-color="#050506"/>
+</radialGradient>
+<linearGradient id="rimGS" x1="0" y1="0" x2="1" y2="1">
+  <stop offset="0" stop-color="#EED98B"/>
+  <stop offset=".5" stop-color="#C9A227"/>
+  <stop offset="1" stop-color="#8A6E16"/>
+</linearGradient>
+<filter id="softGS" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="6"/></filter>
     <clipPath id="carbody"><path d="M196 372 C192 371 190 368 189 364 L187 350 C186 344 186 338 188 333 C190 327 194 324 200 322 C214 318 232 315 252 313 C282 310 316 308 348 308 L358 307 C370 292 384 281 400 276 C412 272 424 271 436 273 C446 274 456 278 464 283 C482 292 500 302 516 311 C532 318 548 323 562 327 C576 330 592 333 606 337 C618 340 626 344 630 349 C633 355 633 362 629 367 C627 371 623 372 618 372 L578 372 A 38 38 0 0 0 502 372 L310 372 A 38 38 0 0 0 234 372 Z"/></clipPath>
-    <g clip-path="url(#carbody)"><rect class="shine" x="0" y="240" width="110" height="150" fill="#FFFFFF" opacity=".35"/></g>
-    <!-- フェンダーパネルライン -->
-    <path d="M240 336 A 36 36 0 0 1 304 334" fill="none" stroke="#CFCBBE" stroke-width="2"/>
-    <path d="M508 332 A 36 36 0 0 1 572 336" fill="none" stroke="#CFCBBE" stroke-width="2"/>
-    <!-- キャビングラス（流麗なファストバック） -->
-    <path d="M362 307 C372 294 384 284 399 279 C410 275 422 274 433 276 C443 278 452 282 460 287 C476 296 490 304 504 312 C456 310 406 308 362 307 Z" fill="#10171D" stroke="#5A6068" stroke-width="2.5"/>
-    <line x1="446" y1="282" x2="452" y2="309" stroke="#5A6068" stroke-width="2"/>
-    <!-- フロントグリル・3連サイドベント -->
+    <clipPath id="gtGlassClip"><path d="M362 307 C372 294 384 284 399 279 C410 275 422 274 433 276 C443 278 452 282 460 287 C476 296 490 304 504 312 C456 310 406 308 362 307 Z"/></clipPath>
+  </defs>
+  <g>
+    <path d="M196 372 C192 371 190 368 189 364 L187 350 C186 344 186 338 188 333 C190 327 194 324 200 322 C214 318 232 315 252 313 C282 310 316 308 348 308 L358 307 C370 292 384 281 400 276 C412 272 424 271 436 273 C446 274 456 278 464 283 C482 292 500 302 516 311 C532 318 548 323 562 327 C576 330 592 333 606 337 C618 340 626 344 630 349 C633 355 633 362 629 367 C627 371 623 372 618 372 L578 372 A 38 38 0 0 0 502 372 L310 372 A 38 38 0 0 0 234 372 Z" fill="url(#gtBody)" stroke="#9B978A" stroke-width="2"/>
+    <g clip-path="url(#carbody)">
+      <rect x="180" y="360" width="460" height="16" fill="#000" opacity=".22"/>
+      <circle cx="272" cy="366" r="41" fill="none" stroke="#000" stroke-width="10" opacity=".28"/>
+      <circle cx="540" cy="366" r="41" fill="none" stroke="#000" stroke-width="10" opacity=".28"/>
+      <path d="M252 313 C284 310 318 308 352 308 L352 312 C318 312 286 314 254 317 Z" fill="#FFF" opacity=".55"/>
+      <path d="M462 284 C482 293 502 303 520 312 L516 316 C498 307 478 297 458 288 Z" fill="#FFF" opacity=".35"/>
+      <path d="M206 336 C320 328 480 330 610 342 L610 356 C480 342 320 340 206 350 Z" fill="#9B978A" opacity=".16"/>
+      <rect class="shine" x="0" y="240" width="110" height="150" fill="#FFFFFF" opacity=".35"/>
+    </g>
+    <g fill="none" stroke="#B8B4A7" stroke-width="1.6" opacity=".95">
+      <path d="M366 309 C364 330 364 350 366 370"/>
+      <path d="M470 314 C470 333 471 352 474 370"/>
+      <path d="M358 307 C350 300 340 296 328 294"/>
+    </g>
+    <path d="M240 336 A 36 36 0 0 1 304 334" fill="none" stroke="#B8B4A7" stroke-width="1.6"/>
+    <path d="M508 332 A 36 36 0 0 1 572 336" fill="none" stroke="#B8B4A7" stroke-width="1.6"/>
+    <path d="M362 307 C372 294 384 284 399 279 C410 275 422 274 433 276 C443 278 452 282 460 287 C476 296 490 304 504 312 C456 310 406 308 362 307 Z" fill="url(#gtGlass)" stroke="#8A929C" stroke-width="1.8"/>
+    <g clip-path="url(#gtGlassClip)">
+      <path d="M404 278 L424 277 L388 310 L370 309 Z" fill="#FFF" opacity=".14"/>
+    </g>
+    <line x1="446" y1="282" x2="452" y2="309" stroke="#38424C" stroke-width="2"/>
+    <!-- グリル・ベント -->
     <ellipse cx="191" cy="349" rx="8" ry="13" fill="#15161A"/>
+    <path d="M188 340 L188 358 M191 339 L191 360 M194 340 L194 358" stroke="#2E3238" stroke-width="1.2" fill="none"/>
     <g fill="#8A867A"><rect x="318" y="320" width="5" height="11" rx="2"/><rect x="328" y="319" width="5" height="11" rx="2"/><rect x="338" y="318" width="5" height="11" rx="2"/></g>
-    <!-- キャラクターライン・ドア -->
-    <path d="M210 342 C340 334 480 336 612 347" fill="none" stroke="#CFCBBE" stroke-width="2"/>
-    <path d="M366 309 C364 330 364 350 366 370 M470 314 C470 333 471 352 474 370" fill="none" stroke="#CFCBBE" stroke-width="2"/>
-    <rect x="418" y="320" width="18" height="5" rx="2.5" fill="#C9C5B8" stroke="#A8A496" stroke-width="1.2"/>
+    <rect x="418" y="320" width="18" height="5" rx="2.5" fill="#D9D5C8" stroke="#9B978A" stroke-width="1"/>
+    <path d="M372 288 l-5 -7 q-2 -3 -7 -3 l-4 0 q-3 0 -3 3 q0 3 3 3 l11 4 z" fill="#D9D5C8" stroke="#9B978A" stroke-width=".8"/>
+    <!-- ランプ類 -->
     <ellipse cx="218" cy="319" rx="14" ry="5" fill="#E8D9A0" stroke="#B9A75E" stroke-width="1.5" transform="rotate(-10 218 319)"/>
-    <rect x="620" y="340" width="10" height="6" rx="3" fill="#F35B45"/>
-    <circle cx="272" cy="366" r="30" fill="#0B0B0D" stroke="#C9A227" stroke-width="4"/>
-    <circle cx="272" cy="366" r="10" fill="#15151A" stroke="#E8D9A0" stroke-width="3"/>
-    <circle cx="540" cy="366" r="30" fill="#0B0B0D" stroke="#C9A227" stroke-width="4"/>
-    <circle cx="540" cy="366" r="10" fill="#15151A" stroke="#E8D9A0" stroke-width="3"/>
+    <circle cx="212" cy="321" r="3" fill="#FFF7DE" stroke="#8A7A3C" stroke-width="1"/>
+    <rect x="618" y="340" width="10" height="6" rx="3" fill="#F35B45" opacity=".5" filter="url(#softGS)"/>
+    <rect x="618" y="340" width="10" height="6" rx="3" fill="#F35B45"/>
+    <!-- 前後下部 -->
+    <path d="M188 352 L214 350 L215 360 L190 362 Z" fill="#0C0D10"/>
+    <path d="M306 366 L500 366 L500 372 L306 372 Z" fill="#0C0D10"/>
+<g>
+<circle cx="272" cy="366" r="34.0" fill="url(#tireGS)"/>
+<circle cx="272" cy="366" r="34.0" fill="none" stroke="#000" stroke-width="0.9" opacity=".6"/>
+<circle cx="272" cy="366" r="22.5" fill="#08090B"/>
+<circle cx="272" cy="366" r="13.8" fill="#575B60"/>
+<circle cx="272" cy="366" r="13.8" fill="none" stroke="#3E4247" stroke-width="1.2"/>
+<circle cx="272" cy="366" r="7.6" fill="#34373B"/>
+<rect x="256.4" y="360.8" width="4.0" height="10.4" rx="1.7" fill="#C9A227" stroke="#7E6414" stroke-width="0.7"/>
+<g class="wheelless">
+<circle cx="272" cy="366" r="20.7" fill="none" stroke="url(#rimGS)" stroke-width="2.6"/>
+<line x1="276.8" y1="366.9" x2="291.8" y2="364.6" stroke="url(#rimGS)" stroke-width="1.8" stroke-linecap="round"/>
+<line x1="275.4" y1="369.5" x2="288.9" y2="376.5" stroke="url(#rimGS)" stroke-width="1.8" stroke-linecap="round"/>
+<line x1="272.7" y1="370.8" x2="279.4" y2="384.4" stroke="url(#rimGS)" stroke-width="1.8" stroke-linecap="round"/>
+<line x1="269.7" y1="370.3" x2="267.2" y2="385.3" stroke="url(#rimGS)" stroke-width="1.8" stroke-linecap="round"/>
+<line x1="267.6" y1="368.1" x2="256.8" y2="378.8" stroke="url(#rimGS)" stroke-width="1.8" stroke-linecap="round"/>
+<line x1="267.2" y1="365.1" x2="252.2" y2="367.4" stroke="url(#rimGS)" stroke-width="1.8" stroke-linecap="round"/>
+<line x1="268.6" y1="362.5" x2="255.1" y2="355.5" stroke="url(#rimGS)" stroke-width="1.8" stroke-linecap="round"/>
+<line x1="271.3" y1="361.2" x2="264.6" y2="347.6" stroke="url(#rimGS)" stroke-width="1.8" stroke-linecap="round"/>
+<line x1="274.3" y1="361.7" x2="276.8" y2="346.7" stroke="url(#rimGS)" stroke-width="1.8" stroke-linecap="round"/>
+<line x1="276.4" y1="363.9" x2="287.2" y2="353.2" stroke="url(#rimGS)" stroke-width="1.8" stroke-linecap="round"/>
+<circle cx="272" cy="366" r="4.9" fill="#C9A227" stroke="#7E6414" stroke-width="0.9"/>
+<circle cx="272" cy="366" r="2.0" fill="#3A3020"/>
+</g></g>
+<g>
+<circle cx="540" cy="366" r="34.0" fill="url(#tireGS)"/>
+<circle cx="540" cy="366" r="34.0" fill="none" stroke="#000" stroke-width="0.9" opacity=".6"/>
+<circle cx="540" cy="366" r="22.5" fill="#08090B"/>
+<circle cx="540" cy="366" r="13.8" fill="#575B60"/>
+<circle cx="540" cy="366" r="13.8" fill="none" stroke="#3E4247" stroke-width="1.2"/>
+<circle cx="540" cy="366" r="7.6" fill="#34373B"/>
+<rect x="524.4" y="360.8" width="4.0" height="10.4" rx="1.7" fill="#C9A227" stroke="#7E6414" stroke-width="0.7"/>
+<g class="wheelless">
+<circle cx="540" cy="366" r="20.7" fill="none" stroke="url(#rimGS)" stroke-width="2.6"/>
+<line x1="544.8" y1="366.9" x2="559.8" y2="364.6" stroke="url(#rimGS)" stroke-width="1.8" stroke-linecap="round"/>
+<line x1="543.4" y1="369.5" x2="556.9" y2="376.5" stroke="url(#rimGS)" stroke-width="1.8" stroke-linecap="round"/>
+<line x1="540.7" y1="370.8" x2="547.4" y2="384.4" stroke="url(#rimGS)" stroke-width="1.8" stroke-linecap="round"/>
+<line x1="537.7" y1="370.3" x2="535.2" y2="385.3" stroke="url(#rimGS)" stroke-width="1.8" stroke-linecap="round"/>
+<line x1="535.6" y1="368.1" x2="524.8" y2="378.8" stroke="url(#rimGS)" stroke-width="1.8" stroke-linecap="round"/>
+<line x1="535.2" y1="365.1" x2="520.2" y2="367.4" stroke="url(#rimGS)" stroke-width="1.8" stroke-linecap="round"/>
+<line x1="536.6" y1="362.5" x2="523.1" y2="355.5" stroke="url(#rimGS)" stroke-width="1.8" stroke-linecap="round"/>
+<line x1="539.3" y1="361.2" x2="532.6" y2="347.6" stroke="url(#rimGS)" stroke-width="1.8" stroke-linecap="round"/>
+<line x1="542.3" y1="361.7" x2="544.8" y2="346.7" stroke="url(#rimGS)" stroke-width="1.8" stroke-linecap="round"/>
+<line x1="544.4" y1="363.9" x2="555.2" y2="353.2" stroke="url(#rimGS)" stroke-width="1.8" stroke-linecap="round"/>
+<circle cx="540" cy="366" r="4.9" fill="#C9A227" stroke="#7E6414" stroke-width="0.9"/>
+<circle cx="540" cy="366" r="2.0" fill="#3A3020"/>
+</g></g>
   </g>
 
   <!-- 揺れるプライスタグ -->

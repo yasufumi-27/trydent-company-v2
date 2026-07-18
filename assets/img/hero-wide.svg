@@ -38,44 +38,117 @@
   <rect x="440" y="240" width="180" height="120" fill="#0E1B22" stroke="#C9A227" stroke-width="2.5"/>
   <line x1="530" y1="240" x2="530" y2="360" stroke="#C9A227" stroke-width="2" stroke-opacity=".5"/>
 
-  <!-- 店前の車（トヨタ MR2 SW20／ダークブルーマイカ：リトラ＋リアスポイラー） -->
+  <!-- 店前の車（トヨタ MR2 SW20／ダークブルーマイカ：リアル描画） -->
+  <defs>
+    <linearGradient id="mrBody" x1="0" y1="340" x2="0" y2="432" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#5C7AAB"/><stop offset=".2" stop-color="#3D5580"/>
+      <stop offset=".5" stop-color="#1E2A4A"/><stop offset=".82" stop-color="#131D33"/><stop offset="1" stop-color="#0A1120"/>
+    </linearGradient>
+    <linearGradient id="mrGlass" x1="0" y1="336" x2="0" y2="380" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#4A5E74"/><stop offset=".5" stop-color="#1C2733"/><stop offset="1" stop-color="#0C1319"/>
+    </linearGradient>
+    <radialGradient id="tireGM">
+  <stop offset=".55" stop-color="#131418"/>
+  <stop offset=".8" stop-color="#212329"/>
+  <stop offset=".93" stop-color="#0B0C0E"/>
+  <stop offset="1" stop-color="#050506"/>
+</radialGradient>
+<linearGradient id="rimGM" x1="0" y1="0" x2="1" y2="1">
+  <stop offset="0" stop-color="#EED98B"/>
+  <stop offset=".5" stop-color="#C9A227"/>
+  <stop offset="1" stop-color="#8A6E16"/>
+</linearGradient>
+<filter id="softGM" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="6"/></filter>
+    <clipPath id="mrClip"><path d="M450 414 C446 414 444 411 444 407 L444 384 C444 379 447 374 453 372 C468 370 486 368 502 367 C508 367 513 367 517 368 C526 362 535 355 544 350 C551 347 559 345 567 346 C577 347 586 349 593 352 C608 360 624 368 639 374 C660 377 682 381 700 385 C712 388 721 391 726 395 C729 398 730 403 729 407 C728 411 726 414 722 414 L696 414 A 28 28 0 0 0 640 414 L532 414 A 28 28 0 0 0 476 414 Z"/></clipPath>
+    <clipPath id="mrGlassClip"><path d="M594 354 L634 373 L551 376 L553 356 C566 350 581 350 594 354 Z"/></clipPath>
+  </defs>
   <g>
-    <path class="beam" d="M722 390l108-18v42z" fill="#E8D9A0"/>
-    <!-- リアスポイラー（SW20純正カラードスポイラー：デッキ後端に低く水平） -->
-    <path d="M462 368 L464 358 M492 367 L494 357" stroke="#101827" stroke-width="3" stroke-linecap="round"/>
-    <path d="M444 352 C462 353 484 355 504 359 L502 367 C482 363 461 361 443 360 Z" fill="#1E2A4A" stroke="#101827" stroke-width="2.5"/>
-    <!-- ボディ（実車比率：全長285px・全高85px・カムテール＋ウェッジノーズ） -->
-    <path d="M450 414
-             C446 414 444 411 444 407
-             L444 384
-             C444 379 447 374 453 372
-             C468 370 486 368 502 367
-             C508 367 513 367 517 368
-             C526 362 535 355 544 350
-             C551 347 559 345 567 346
-             C577 347 586 349 593 352
-             C608 360 624 368 639 374
-             C660 377 682 381 700 385
-             C712 388 721 391 726 395
-             C729 398 730 403 729 407
-             C728 411 726 414 722 414
-             L696 414 A 28 28 0 0 0 640 414
-             L532 414 A 28 28 0 0 0 476 414 Z"
-          fill="#1E2A4A" stroke="#101827" stroke-width="3.5"/>
-    <!-- ウインドウ（強傾斜Aピラー＋Bピラー） -->
-    <path d="M594 354 L634 373 L551 376 L553 356 C566 350 581 350 594 354 Z" fill="#10171D" stroke="#5A6068" stroke-width="2.5"/>
-    <line x1="576" y1="351" x2="580" y2="375" stroke="#5A6068" stroke-width="2"/>
-    <!-- リトラクタブルライト（格納状態）・テール・サイドインテーク・サイドライン -->
-    <rect x="698" y="382" width="22" height="6" rx="2" fill="#16203A" stroke="#101827" stroke-width="1.5" transform="rotate(5 709 385)"/>
-    <rect x="445" y="378" width="9" height="13" rx="2" fill="#F35B45"/>
-    <path d="M549 386 L566 384 L569 398 L553 399 Z" fill="#16203A" stroke="#101827" stroke-width="1.5"/>
-    <path d="M456 381 C520 378 590 376 636 375" fill="none" stroke="#35507E" stroke-width="1.8"/>
-    <path d="M547 379 C546 390 546 401 548 412 M634 376 C632 388 632 400 634 412" fill="none" stroke="#35507E" stroke-width="1.8"/>
-    <rect x="598" y="382" width="14" height="4" rx="2" fill="#35507E"/>
-    <circle cx="504" cy="410" r="22" fill="#0B0B0D" stroke="#C9A227" stroke-width="3.5"/>
-    <circle cx="504" cy="410" r="7" fill="#15151A" stroke="#E8D9A0" stroke-width="2.5"/>
-    <circle cx="668" cy="410" r="22" fill="#0B0B0D" stroke="#C9A227" stroke-width="3.5"/>
-    <circle cx="668" cy="410" r="7" fill="#15151A" stroke="#E8D9A0" stroke-width="2.5"/>
+    <path class="beam" d="M726 392l108-16v40z" fill="#E8D9A0"/>
+    <!-- リアスポイラー -->
+    <path d="M462 368 L465 357 M492 367 L494 356" stroke="#0A1120" stroke-width="3.5" stroke-linecap="round"/>
+    <path d="M444 352 C462 353 484 355 504 359 L502 367 C482 363 461 361 443 360 Z" fill="#26375C" stroke="#0A1120" stroke-width="2"/>
+    <path d="M444 352 C462 353 484 355 504 359 L503.5 362 C483 358 461 356 443.5 355 Z" fill="#5C7AAB" opacity=".5"/>
+    <!-- ボディ -->
+    <path d="M450 414 C446 414 444 411 444 407 L444 384 C444 379 447 374 453 372 C468 370 486 368 502 367 C508 367 513 367 517 368 C526 362 535 355 544 350 C551 347 559 345 567 346 C577 347 586 349 593 352 C608 360 624 368 639 374 C660 377 682 381 700 385 C712 388 721 391 726 395 C729 398 730 403 729 407 C728 411 726 414 722 414 L696 414 A 28 28 0 0 0 640 414 L532 414 A 28 28 0 0 0 476 414 Z" fill="url(#mrBody)" stroke="#0A1120" stroke-width="2"/>
+    <g clip-path="url(#mrClip)">
+      <rect x="435" y="400" width="300" height="20" fill="#000" opacity=".32"/>
+      <circle cx="504" cy="410" r="31" fill="none" stroke="#000" stroke-width="8" opacity=".38"/>
+      <circle cx="668" cy="410" r="31" fill="none" stroke="#000" stroke-width="8" opacity=".38"/>
+      <path d="M448 382 C462 375 486 370 514 368 L514 372 C488 374 464 379 452 386 Z" fill="#FFF" opacity=".13"/>
+      <path d="M640 375 C662 378 686 382 706 387 L704 391 C686 386 662 382 640 379 Z" fill="#FFF" opacity=".13"/>
+    </g>
+    <!-- パネルシーム -->
+    <g fill="none" stroke="#101827" stroke-width="1.5" opacity=".9">
+      <path d="M517 368 C520 361 526 353 533 347"/>
+      <path d="M547 379 C546 390 546 401 548 412"/>
+      <path d="M634 376 C632 388 632 400 634 412"/>
+      <path d="M639 374 C650 372 664 372 676 374"/>
+    </g>
+    <!-- ガラス -->
+    <path d="M594 354 L634 373 L551 376 L553 356 C566 350 581 350 594 354 Z" fill="url(#mrGlass)" stroke="#7A828C" stroke-width="1.6"/>
+    <g clip-path="url(#mrGlassClip)">
+      <path d="M576 350 L590 351 L566 377 L554 376 Z" fill="#FFF" opacity=".14"/>
+    </g>
+    <line x1="576" y1="351" x2="580" y2="375" stroke="#38424C" stroke-width="2"/>
+    <!-- リトラ格納ライン・サイドインテーク -->
+    <rect x="698" y="382" width="22" height="6" rx="2" fill="#16203A" stroke="#0A1120" stroke-width="1.2" transform="rotate(5 709 385)"/>
+    <path d="M549 386 L566 384 L569 398 L553 399 Z" fill="#0C0D10"/>
+    <path d="M552 389 L566 387 M553 394 L567 392" stroke="#1E2126" stroke-width="1.5" fill="none"/>
+    <!-- ドアハンドル・ミラー -->
+    <rect x="598" y="382" width="14" height="4" rx="2" fill="#3D5580" stroke="#101827" stroke-width=".8"/>
+    <path d="M640 372 l-3 -6 q-2 -3 -6 -3 l-4 0 q-3 0 -3 3 q0 3 3 3 l13 3 z" fill="#26375C" stroke="#101827" stroke-width=".8"/>
+    <!-- ランプ類 -->
+    <rect x="445" y="378" width="8" height="14" rx="2" fill="#F35B45" opacity=".5" filter="url(#softGM)"/>
+    <rect x="445" y="378" width="8" height="14" rx="2" fill="#F35B45" stroke="#A03428" stroke-width="1"/>
+    <ellipse cx="723" cy="396" rx="4" ry="2.5" fill="#F39800"/>
+    <!-- ロッカー -->
+    <path d="M534 408 L638 408 L638 414 L534 414 Z" fill="#0C0D10"/>
+<g>
+<circle cx="504" cy="410" r="26.0" fill="url(#tireGM)"/>
+<circle cx="504" cy="410" r="26.0" fill="none" stroke="#000" stroke-width="0.7" opacity=".6"/>
+<circle cx="504" cy="410" r="17.2" fill="#08090B"/>
+<circle cx="504" cy="410" r="10.6" fill="#575B60"/>
+<circle cx="504" cy="410" r="10.6" fill="none" stroke="#3E4247" stroke-width="0.9"/>
+<circle cx="504" cy="410" r="5.8" fill="#34373B"/>
+<rect x="492.1" y="406.0" width="3.1" height="7.9" rx="1.3" fill="#C9A227" stroke="#7E6414" stroke-width="0.5"/>
+<g class="wheelless">
+<circle cx="504" cy="410" r="15.8" fill="none" stroke="url(#rimGM)" stroke-width="2.0"/>
+<line x1="507.7" y1="410.6" x2="519.1" y2="408.9" stroke="url(#rimGM)" stroke-width="1.4" stroke-linecap="round"/>
+<line x1="506.6" y1="412.7" x2="516.9" y2="418.0" stroke="url(#rimGM)" stroke-width="1.4" stroke-linecap="round"/>
+<line x1="504.5" y1="413.7" x2="509.7" y2="424.1" stroke="url(#rimGM)" stroke-width="1.4" stroke-linecap="round"/>
+<line x1="502.2" y1="413.3" x2="500.3" y2="424.7" stroke="url(#rimGM)" stroke-width="1.4" stroke-linecap="round"/>
+<line x1="500.6" y1="411.6" x2="492.4" y2="419.8" stroke="url(#rimGM)" stroke-width="1.4" stroke-linecap="round"/>
+<line x1="500.3" y1="409.4" x2="488.9" y2="411.1" stroke="url(#rimGM)" stroke-width="1.4" stroke-linecap="round"/>
+<line x1="501.4" y1="407.3" x2="491.1" y2="402.0" stroke="url(#rimGM)" stroke-width="1.4" stroke-linecap="round"/>
+<line x1="503.5" y1="406.3" x2="498.3" y2="395.9" stroke="url(#rimGM)" stroke-width="1.4" stroke-linecap="round"/>
+<line x1="505.8" y1="406.7" x2="507.7" y2="395.3" stroke="url(#rimGM)" stroke-width="1.4" stroke-linecap="round"/>
+<line x1="507.4" y1="408.4" x2="515.6" y2="400.2" stroke="url(#rimGM)" stroke-width="1.4" stroke-linecap="round"/>
+<circle cx="504" cy="410" r="3.7" fill="#C9A227" stroke="#7E6414" stroke-width="0.7"/>
+<circle cx="504" cy="410" r="1.5" fill="#3A3020"/>
+</g></g>
+<g>
+<circle cx="668" cy="410" r="26.0" fill="url(#tireGM)"/>
+<circle cx="668" cy="410" r="26.0" fill="none" stroke="#000" stroke-width="0.7" opacity=".6"/>
+<circle cx="668" cy="410" r="17.2" fill="#08090B"/>
+<circle cx="668" cy="410" r="10.6" fill="#575B60"/>
+<circle cx="668" cy="410" r="10.6" fill="none" stroke="#3E4247" stroke-width="0.9"/>
+<circle cx="668" cy="410" r="5.8" fill="#34373B"/>
+<rect x="656.1" y="406.0" width="3.1" height="7.9" rx="1.3" fill="#C9A227" stroke="#7E6414" stroke-width="0.5"/>
+<g class="wheelless">
+<circle cx="668" cy="410" r="15.8" fill="none" stroke="url(#rimGM)" stroke-width="2.0"/>
+<line x1="671.7" y1="410.6" x2="683.1" y2="408.9" stroke="url(#rimGM)" stroke-width="1.4" stroke-linecap="round"/>
+<line x1="670.6" y1="412.7" x2="680.9" y2="418.0" stroke="url(#rimGM)" stroke-width="1.4" stroke-linecap="round"/>
+<line x1="668.5" y1="413.7" x2="673.7" y2="424.1" stroke="url(#rimGM)" stroke-width="1.4" stroke-linecap="round"/>
+<line x1="666.2" y1="413.3" x2="664.3" y2="424.7" stroke="url(#rimGM)" stroke-width="1.4" stroke-linecap="round"/>
+<line x1="664.6" y1="411.6" x2="656.4" y2="419.8" stroke="url(#rimGM)" stroke-width="1.4" stroke-linecap="round"/>
+<line x1="664.3" y1="409.4" x2="652.9" y2="411.1" stroke="url(#rimGM)" stroke-width="1.4" stroke-linecap="round"/>
+<line x1="665.4" y1="407.3" x2="655.1" y2="402.0" stroke="url(#rimGM)" stroke-width="1.4" stroke-linecap="round"/>
+<line x1="667.5" y1="406.3" x2="662.3" y2="395.9" stroke="url(#rimGM)" stroke-width="1.4" stroke-linecap="round"/>
+<line x1="669.8" y1="406.7" x2="671.7" y2="395.3" stroke="url(#rimGM)" stroke-width="1.4" stroke-linecap="round"/>
+<line x1="671.4" y1="408.4" x2="679.6" y2="400.2" stroke="url(#rimGM)" stroke-width="1.4" stroke-linecap="round"/>
+<circle cx="668" cy="410" r="3.7" fill="#C9A227" stroke="#7E6414" stroke-width="0.7"/>
+<circle cx="668" cy="410" r="1.5" fill="#3A3020"/>
+</g></g>
   </g>
   <line x1="40" y1="432" x2="760" y2="432" stroke="#2A2A2A" stroke-width="3"/>
 
