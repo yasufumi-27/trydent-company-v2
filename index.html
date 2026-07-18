@@ -86,11 +86,10 @@
         <div class="hero3d__lane"></div>
       </div>
       <svg class="hero3d__car" viewBox="0 0 900 320">
-        <!-- 車体を横切るスピードライン -->
+        <!-- スピードライン（車体と重ならない上空のみ） -->
         <g stroke-linecap="round" fill="none" opacity=".65">
-          <path class="speedline" d="M880 96H520" stroke="#21D4FD" stroke-width="3"/>
-          <path class="speedline" d="M900 150H600" stroke="#E8D9A0" stroke-width="2" style="animation-delay:.18s"/>
-          <path class="speedline" d="M860 196H560" stroke="#C24BF5" stroke-width="2.5" style="animation-delay:.32s"/>
+          <path class="speedline" d="M880 40H430" stroke="#21D4FD" stroke-width="3"/>
+          <path class="speedline" d="M900 62H560" stroke="#E8D9A0" stroke-width="2" style="animation-delay:.18s"/>
         </g>
         <!-- 右向き表示のため左右反転 -->
         <g transform="translate(900 0) scale(-1 1)">
@@ -98,47 +97,54 @@
         <ellipse cx="450" cy="298" rx="350" ry="16" fill="#000" opacity=".55"/>
         <!-- 車体：PORSCHE 718 Cayman GT4 RS／カーマインレッド（定位置で微振動） -->
         <g class="body-bob">
-          <!-- ヘッドライト光 -->
-          <path d="M92 214 L-10 198v40z" fill="#E8D9A0" opacity=".25"/>
+          <!-- ヘッドライト光（ライト位置から前方へ） -->
+          <path d="M100 192 L-20 176 v46 z" fill="#E8D9A0" opacity=".25"/>
           <!-- スワンネックウイング -->
-          <path d="M596 104 L794 92 L799 106 L601 118 Z" fill="#141418" stroke="#3A3A3A" stroke-width="3"/>
-          <rect x="789" y="86" width="12" height="28" rx="3" fill="#141418" stroke="#3A3A3A" stroke-width="2.5"/>
-          <path d="M672 112 C664 128 662 148 666 166 M732 108 C724 124 722 142 726 158" fill="none" stroke="#26262A" stroke-width="7" stroke-linecap="round"/>
-          <!-- ボディ（アーチ切り欠き・ダックテール付きプロファイル） -->
-          <path d="M70 252 L66 244 L84 238
-                   C72 228 72 214 84 206
-                   C120 196 172 190 246 184
-                   C268 181 292 178 310 176
-                   C336 142 372 122 414 114
-                   C448 108 478 110 504 120
-                   C546 138 578 156 606 172
-                   C650 168 700 164 744 162
-                   L758 152 L782 166
-                   C796 176 800 196 796 214
-                   C794 232 788 244 778 250
-                   L774 252
-                   L721 252 A 66 66 0 0 1 591 252
-                   L317 252 A 66 66 0 0 1 187 252 Z"
+          <path d="M620 100 L800 88 L805 102 L625 114 Z" fill="#141418" stroke="#3A3A3A" stroke-width="3"/>
+          <rect x="795" y="82" width="12" height="28" rx="3" fill="#141418" stroke="#3A3A3A" stroke-width="2.5"/>
+          <path d="M688 108 C680 124 678 142 682 158 M748 104 C740 120 738 136 742 150" fill="none" stroke="#26262A" stroke-width="7" stroke-linecap="round"/>
+          <!-- ボディ（実車比率：全長727px・全高207px・ローノーズ＋ファストバック＋ダックテール） -->
+          <path d="M84 252
+                   C79 249 77 243 78 236
+                   L80 216
+                   C82 204 88 194 98 187
+                   C110 178 128 170 148 165
+                   C172 160 202 157 234 157
+                   C260 157 284 161 304 167
+                   L312 169
+                   C334 141 360 116 388 100
+                   C404 91 421 87 437 88
+                   C453 90 467 95 479 103
+                   C503 118 528 132 552 143
+                   C574 153 596 160 618 164
+                   C650 169 682 168 710 164
+                   C736 161 760 156 778 152
+                   C791 149 801 153 805 161
+                   C809 172 810 190 807 208
+                   C805 228 798 244 788 250
+                   L780 252
+                   L722 252 A 66 66 0 0 0 590 252
+                   L318 252 A 66 66 0 0 0 186 252 Z"
                 fill="#AB1631" stroke="#741024" stroke-width="3"/>
           <!-- フェンダーパネルライン -->
-          <path d="M192 212 A 72 72 0 0 1 314 209" fill="none" stroke="#7E1226" stroke-width="2.5"/>
-          <path d="M598 198 A 72 72 0 0 1 716 194" fill="none" stroke="#7E1226" stroke-width="2.5"/>
+          <path d="M194 204 A 70 70 0 0 1 312 200" fill="none" stroke="#7E1226" stroke-width="2.5"/>
+          <path d="M596 198 A 70 70 0 0 1 716 192" fill="none" stroke="#7E1226" stroke-width="2.5"/>
           <!-- キャビングラス -->
-          <path d="M318 172 C344 140 380 122 418 116 C450 111 478 113 502 122 C534 136 562 152 588 168 L540 174 C462 178 386 176 318 172 Z"
+          <path d="M318 168 C338 143 362 118 390 101 C406 92 424 90 440 92 C456 94 470 100 482 107 C504 120 526 133 546 144 C474 155 392 163 318 168 Z"
                 fill="#10171D" stroke="#5A6068" stroke-width="2.5"/>
-          <line x1="498" y1="122" x2="504" y2="172" stroke="#5A6068" stroke-width="2.5"/>
+          <line x1="472" y1="102" x2="480" y2="152" stroke="#5A6068" stroke-width="2.5"/>
           <!-- ドアライン・ドアハンドル -->
-          <path d="M336 176 C332 200 332 226 336 248 M472 178 C470 202 470 228 474 250" fill="none" stroke="#7E1226" stroke-width="2"/>
+          <path d="M330 172 C326 198 326 226 330 248 M474 178 C472 202 472 228 476 250" fill="none" stroke="#7E1226" stroke-width="2"/>
           <rect x="440" y="188" width="26" height="7" rx="3.5" fill="#8E1A2E" stroke="#741024" stroke-width="1.5"/>
           <!-- サイドインテーク -->
-          <path d="M560 190 L606 184 L612 238 L570 242 Z" fill="#141418" stroke="#26262A" stroke-width="2"/>
+          <path d="M556 182 L606 176 L614 234 L568 240 Z" fill="#141418" stroke="#26262A" stroke-width="2"/>
           <!-- ロッカーパネル -->
-          <path d="M322 248 H 586" stroke="#141418" stroke-width="6" stroke-linecap="round"/>
+          <path d="M324 248 H 584" stroke="#141418" stroke-width="6" stroke-linecap="round"/>
           <!-- ヘッドライト・テールランプ -->
-          <ellipse cx="112" cy="201" rx="17" ry="9" fill="#E8D9A0" stroke="#B9A75E" stroke-width="2"/>
-          <rect x="778" y="180" width="20" height="8" rx="4" fill="#F35B45"/>
+          <ellipse cx="104" cy="196" rx="18" ry="9" fill="#E8D9A0" stroke="#B9A75E" stroke-width="2" transform="rotate(-28 104 196)"/>
+          <rect x="790" y="172" width="16" height="8" rx="4" fill="#F35B45"/>
           <!-- ドアミラー -->
-          <path d="M324 154 l-22 -9 v13 l22 5 z" fill="#AB1631" stroke="#741024" stroke-width="2"/>
+          <path d="M334 158 l-24 -10 v14 l24 6 z" fill="#AB1631" stroke="#741024" stroke-width="2"/>
         </g>
         </g>
         <!-- フロントホイール（反転後のノーズ側 x=648 へ配置） -->
