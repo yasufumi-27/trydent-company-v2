@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="Georgia, 'Times New Roman', serif">
+  <style>
+    .rim{animation:spin 2.4s cubic-bezier(.4,0,.6,1) infinite;transform-box:fill-box;transform-origin:center}
+    @keyframes spin{to{transform:rotate(360deg)}}
+    .arc{stroke-dasharray:80 600;animation:arc 2s linear infinite}
+    .arc.a2{animation-delay:1s}
+    @keyframes arc{to{stroke-dashoffset:-680}}
+    .spark{animation:tw 2s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+    .spark.d2{animation-delay:1s}
+    @keyframes tw{0%,100%{opacity:0;transform:scale(.3)}50%{opacity:1;transform:scale(1)}}
+    @media (prefers-reduced-motion:reduce){*{animation:none!important}}
+  </style>
+
+  <rect width="800" height="500" fill="#0B0B0D"/>
+  <radialGradient id="bg" cx="50%" cy="48%" r="72%">
+    <stop offset="0" stop-color="#191410"/><stop offset="1" stop-color="#0B0B0D"/>
+  </radialGradient>
+  <rect width="800" height="500" fill="url(#bg)"/>
+  <rect x="18" y="18" width="764" height="464" fill="none" stroke="#C9A227" stroke-opacity=".35" stroke-width="2"/>
+
+  <!-- スピードアーク -->
+  <circle class="arc" cx="400" cy="252" r="168" fill="none" stroke="#21D4FD" stroke-width="3" stroke-linecap="round" opacity=".7"/>
+  <circle class="arc a2" cx="400" cy="252" r="186" fill="none" stroke="#C24BF5" stroke-width="2.5" stroke-linecap="round" opacity=".55"/>
+
+  <!-- ホイール -->
+  <circle cx="400" cy="252" r="140" fill="#111114" stroke="#2E2E34" stroke-width="26"/>
+  <circle cx="400" cy="252" r="126" fill="none" stroke="#0B0B0D" stroke-width="6"/>
+  <g class="rim">
+    <circle cx="400" cy="252" r="108" fill="#15151A" stroke="#C9A227" stroke-width="5"/>
+    <g stroke="#C9A227" stroke-width="12" stroke-linecap="round">
+      <line x1="400" y1="158" x2="400" y2="346"/>
+      <line x1="306" y1="252" x2="494" y2="252"/>
+      <line x1="334" y1="186" x2="466" y2="318"/>
+      <line x1="466" y1="186" x2="334" y2="318"/>
+    </g>
+    <g fill="#E8D9A0">
+      <circle cx="400" cy="176" r="6"/><circle cx="400" cy="328" r="6"/>
+      <circle cx="324" cy="252" r="6"/><circle cx="476" cy="252" r="6"/>
+    </g>
+  </g>
+  <circle cx="400" cy="252" r="26" fill="#0B0B0D" stroke="#E8D9A0" stroke-width="4"/>
+  <path d="M400 238l6 10h-12zM400 266l-6-10h12z" fill="#C9A227"/>
+
+  <!-- スパークル -->
+  <g fill="#E8D9A0">
+    <path class="spark" d="M170 140l6 16 16 6-16 6-6 16-6-16-16-6 16-6z"/>
+    <path class="spark d2" d="M636 336l5 13 13 5-13 5-5 13-5-13-13-5 13-5z"/>
+  </g>
+
+  <text x="400" y="454" text-anchor="middle" fill="#E8D9A0" font-size="28" letter-spacing="10">WHEELS &amp; SUSPENSION</text>
+</svg>

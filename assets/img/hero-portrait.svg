@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="Georgia, 'Times New Roman', serif">
+  <style>
+    .shine{animation:shine 3.4s linear infinite}
+    @keyframes shine{0%{transform:translateX(-420px) skewX(-20deg)}100%{transform:translateX(900px) skewX(-20deg)}}
+    .ring{animation:ringp 3s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+    @keyframes ringp{0%,100%{transform:scale(1);opacity:.9}50%{transform:scale(1.04);opacity:1}}
+    .spark{animation:tw 2.4s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+    .spark.d2{animation-delay:.8s}.spark.d3{animation-delay:1.6s}
+    @keyframes tw{0%,100%{opacity:0;transform:scale(.3)}50%{opacity:1;transform:scale(1)}}
+    @media (prefers-reduced-motion:reduce){*{animation:none!important}}
+  </style>
+
+  <rect width="800" height="500" fill="#0B0B0D"/>
+  <radialGradient id="bg" cx="50%" cy="45%" r="72%">
+    <stop offset="0" stop-color="#1B1710"/><stop offset="1" stop-color="#0B0B0D"/>
+  </radialGradient>
+  <rect width="800" height="500" fill="url(#bg)"/>
+  <rect x="18" y="18" width="764" height="464" fill="none" stroke="#C9A227" stroke-opacity=".35" stroke-width="2"/>
+
+  <!-- エンブレムリング -->
+  <g class="ring">
+    <circle cx="400" cy="228" r="150" fill="#111114" stroke="#C9A227" stroke-width="5"/>
+    <circle cx="400" cy="228" r="132" fill="none" stroke="#C9A227" stroke-width="2" stroke-opacity=".5"/>
+  </g>
+
+  <!-- トライデント -->
+  <g stroke="#C9A227" stroke-width="12" stroke-linecap="round" fill="none">
+    <line x1="400" y1="150" x2="400" y2="322"/>
+    <path d="M340 168v40c0 22 14 36 34 40"/>
+    <path d="M460 168v40c0 22-14 36-34 40"/>
+  </g>
+  <path d="M400 128l14 24h-28z" fill="#E8D9A0"/>
+  <path d="M340 148l11 20h-22zM460 148l11 20h-22z" fill="#E8D9A0"/>
+  <path d="M382 322h36l-8 16h-20z" fill="#C9A227"/>
+
+  <!-- シャイン -->
+  <clipPath id="ringclip"><circle cx="400" cy="228" r="150"/></clipPath>
+  <g clip-path="url(#ringclip)"><rect class="shine" x="0" y="60" width="90" height="340" fill="#FFFFFF" opacity=".14"/></g>
+
+  <!-- スパークル -->
+  <g fill="#E8D9A0">
+    <path class="spark" d="M170 130l6 16 16 6-16 6-6 16-6-16-16-6 16-6z"/>
+    <path class="spark d2" d="M640 300l5 13 13 5-13 5-5 13-5-13-13-5 13-5z"/>
+    <path class="spark d3" d="M610 110l4 11 11 4-11 4-4 11-4-11-11-4 11-4z"/>
+  </g>
+
+  <text x="400" y="440" text-anchor="middle" fill="#E8D9A0" font-size="30" letter-spacing="12">TRIDENT COMPANY</text>
+  <text x="400" y="468" text-anchor="middle" fill="#8A8A8A" font-size="13" letter-spacing="6">TOTAL CAR SUPPORT</text>
+</svg>

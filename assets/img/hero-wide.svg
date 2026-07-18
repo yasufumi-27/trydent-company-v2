@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="Georgia, 'Times New Roman', serif">
+  <style>
+    .sign{animation:neon 2.8s ease-in-out infinite}
+    @keyframes neon{0%,100%{opacity:1}50%{opacity:.55}}
+    .star{animation:tw 2.6s ease-in-out infinite}
+    .star.d2{animation-delay:.9s}.star.d3{animation-delay:1.7s}
+    @keyframes tw{0%,100%{opacity:.15}50%{opacity:1}}
+    .beam{animation:beam 3.2s ease-in-out infinite}
+    @keyframes beam{0%,100%{opacity:.18}50%{opacity:.42}}
+    @media (prefers-reduced-motion:reduce){*{animation:none!important}}
+  </style>
+
+  <rect width="800" height="500" fill="#0B0B0D"/>
+  <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#0B0B12"/><stop offset="1" stop-color="#14110B"/>
+  </linearGradient>
+  <rect width="800" height="360" fill="url(#sky)"/>
+  <rect x="18" y="18" width="764" height="464" fill="none" stroke="#C9A227" stroke-opacity=".35" stroke-width="2"/>
+
+  <!-- 星 -->
+  <g fill="#E8D9A0">
+    <circle class="star" cx="120" cy="70" r="2.5"/><circle class="star d2" cx="240" cy="110" r="2"/>
+    <circle class="star d3" cx="660" cy="80" r="2.5"/><circle class="star" cx="720" cy="140" r="2"/>
+    <circle class="star d2" cx="80" cy="150" r="2"/>
+  </g>
+
+  <!-- ガレージ -->
+  <rect x="140" y="150" width="520" height="210" fill="#15151A" stroke="#C9A227" stroke-width="3.5"/>
+  <path d="M120 150l280-60 280 60z" fill="#1E1E24" stroke="#C9A227" stroke-width="3.5"/>
+  <!-- サインボード -->
+  <g class="sign">
+    <rect x="250" y="168" width="300" height="52" rx="8" fill="#0B0B0D" stroke="#E8D9A0" stroke-width="3"/>
+    <text x="400" y="202" text-anchor="middle" fill="#E8D9A0" font-size="24" letter-spacing="8">TRIDENT</text>
+  </g>
+  <!-- シャッター -->
+  <rect x="180" y="240" width="180" height="120" fill="#111114" stroke="#C9A227" stroke-width="2.5"/>
+  <g stroke="#2E2E34" stroke-width="3"><line x1="180" y1="260" x2="360" y2="260"/><line x1="180" y1="280" x2="360" y2="280"/><line x1="180" y1="300" x2="360" y2="300"/><line x1="180" y1="320" x2="360" y2="320"/><line x1="180" y1="340" x2="360" y2="340"/></g>
+  <rect x="440" y="240" width="180" height="120" fill="#0E1B22" stroke="#C9A227" stroke-width="2.5"/>
+  <line x1="530" y1="240" x2="530" y2="360" stroke="#C9A227" stroke-width="2" stroke-opacity=".5"/>
+
+  <!-- 店前の車（トヨタ MR2 SW20／ダークブルーマイカ：リトラ＋リアスポイラー） -->
+  <g>
+    <path class="beam" d="M714 384l110-20v44z" fill="#E8D9A0"/>
+    <!-- リアスポイラー（SW20純正の台形ウイング） -->
+    <path d="M440 361 L443 353 M463 360 L465 352" stroke="#101827" stroke-width="3.5" stroke-linecap="round"/>
+    <path d="M426 348 C446 349 468 351 488 355 L486 363 C466 359 445 357 425 356 Z" fill="#1E2A4A" stroke="#101827" stroke-width="2.5"/>
+    <!-- ボディ（ウェッジノーズ＋フライングバットレスのミッドシップシルエット） -->
+    <path d="M425 410
+             C421 405 419 398 420 391
+             L423 374
+             C424 368 428 364 434 363
+             C454 360 475 358 495 357
+             C504 356 511 357 516 359
+             C527 346 539 337 553 334
+             C563 332 574 332 584 334
+             C594 337 602 342 609 348
+             C616 355 623 361 629 366
+             C653 369 677 373 697 378
+             C707 381 713 386 716 392
+             C718 398 717 405 713 409
+             C711 412 707 414 703 414
+             L696 414 A 28 28 0 0 1 640 414
+             L532 414 A 28 28 0 0 1 476 414 Z"
+          fill="#1E2A4A" stroke="#101827" stroke-width="3.5"/>
+    <!-- ウインドウ（Aピラー強傾斜＋太いBピラー） -->
+    <path d="M555 340 C563 336 573 335 582 337 L612 363 L536 361 C541 353 547 346 555 340 Z" fill="#10171D" stroke="#5A6068" stroke-width="2.5"/>
+    <line x1="578" y1="336" x2="583" y2="362" stroke="#5A6068" stroke-width="2"/>
+    <!-- リトラクタブルライト（格納状態）・テール・サイドインテーク・サイドライン -->
+    <rect x="682" y="372" width="22" height="6" rx="2" fill="#16203A" stroke="#101827" stroke-width="1.5" transform="rotate(4 693 375)"/>
+    <rect x="424" y="382" width="12" height="6" rx="3" fill="#F35B45"/>
+    <path d="M537 379 L556 377 L559 391 L541 392 Z" fill="#16203A" stroke="#101827" stroke-width="1.5"/>
+    <path d="M440 394 C520 392 620 392 700 396" fill="none" stroke="#35507E" stroke-width="2"/>
+    <path d="M566 364 C564 380 564 397 566 412" fill="none" stroke="#35507E" stroke-width="1.8"/>
+    <circle cx="504" cy="410" r="22" fill="#0B0B0D" stroke="#C9A227" stroke-width="3.5"/>
+    <circle cx="504" cy="410" r="7" fill="#15151A" stroke="#E8D9A0" stroke-width="2.5"/>
+    <circle cx="668" cy="410" r="22" fill="#0B0B0D" stroke="#C9A227" stroke-width="3.5"/>
+    <circle cx="668" cy="410" r="7" fill="#15151A" stroke="#E8D9A0" stroke-width="2.5"/>
+  </g>
+  <line x1="40" y1="432" x2="760" y2="432" stroke="#2A2A2A" stroke-width="3"/>
+
+  <text x="400" y="470" text-anchor="middle" fill="#8A8A8A" font-size="13" letter-spacing="6">KISHIWADA / OSAKA — TOTAL CAR SUPPORT</text>
+</svg>

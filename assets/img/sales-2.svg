@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="Georgia, 'Times New Roman', serif">
+  <style>
+    .key{animation:swing 3s ease-in-out infinite;transform-origin:400px 96px}
+    @keyframes swing{0%,100%{transform:rotate(-10deg)}50%{transform:rotate(10deg)}}
+    .coin{animation:flip 3.2s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+    @keyframes flip{0%,100%{transform:scaleX(1)}50%{transform:scaleX(.15)}}
+    .spark{animation:tw 2.2s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+    .spark.d2{animation-delay:.7s}.spark.d3{animation-delay:1.4s}
+    @keyframes tw{0%,100%{opacity:0;transform:scale(.3)}50%{opacity:1;transform:scale(1)}}
+    @media (prefers-reduced-motion:reduce){*{animation:none!important}}
+  </style>
+
+  <rect width="800" height="500" fill="#0B0B0D"/>
+  <radialGradient id="bg" cx="50%" cy="45%" r="75%">
+    <stop offset="0" stop-color="#181410"/><stop offset="1" stop-color="#0B0B0D"/>
+  </radialGradient>
+  <rect width="800" height="500" fill="url(#bg)"/>
+  <rect x="18" y="18" width="764" height="464" fill="none" stroke="#C9A227" stroke-opacity=".35" stroke-width="2"/>
+
+  <circle cx="400" cy="92" r="8" fill="none" stroke="#C9A227" stroke-width="4"/>
+
+  <!-- 揺れるカーキー -->
+  <g class="key">
+    <line x1="400" y1="100" x2="400" y2="168" stroke="#C9A227" stroke-width="4"/>
+    <circle cx="400" cy="188" r="24" fill="none" stroke="#C9A227" stroke-width="8"/>
+    <!-- スマートキー本体 -->
+    <g transform="rotate(8 400 300)">
+      <rect x="352" y="212" width="96" height="150" rx="26" fill="#1E1E24" stroke="#C9A227" stroke-width="4"/>
+      <rect x="374" y="238" width="52" height="20" rx="10" fill="#C9A227"/>
+      <rect x="374" y="272" width="52" height="20" rx="10" fill="#26262E" stroke="#C9A227" stroke-width="2.5"/>
+      <circle cx="400" cy="326" r="14" fill="#26262E" stroke="#E8D9A0" stroke-width="3"/>
+      <path d="M394 326l4 4 8-8" fill="none" stroke="#E8D9A0" stroke-width="2.5" stroke-linecap="round"/>
+    </g>
+  </g>
+
+  <!-- ¥コイン -->
+  <g class="coin">
+    <circle cx="606" cy="330" r="52" fill="#C9A227"/>
+    <circle cx="606" cy="330" r="42" fill="none" stroke="#0B0B0D" stroke-width="3" opacity=".5"/>
+    <path d="M590 308l16 24 16-24M606 332v22M594 338h24M594 350h24" fill="none" stroke="#0B0B0D" stroke-width="5" stroke-linecap="round"/>
+  </g>
+
+  <!-- スパークル -->
+  <g fill="#E8D9A0">
+    <path class="spark" d="M196 190l6 16 16 6-16 6-6 16-6-16-16-6 16-6z"/>
+    <path class="spark d2" d="M256 330l5 13 13 5-13 5-5 13-5-13-13-5 13-5z"/>
+    <path class="spark d3" d="M620 180l5 13 13 5-13 5-5 13-5-13-13-5 13-5z"/>
+  </g>
+
+  <text x="400" y="446" text-anchor="middle" fill="#E8D9A0" font-size="28" letter-spacing="10">PURCHASE &amp; TRADE-IN</text>
+  <text x="400" y="472" text-anchor="middle" fill="#8A8A8A" font-size="13" letter-spacing="6">FREE APPRAISAL</text>
+</svg>
