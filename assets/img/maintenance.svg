@@ -29,108 +29,136 @@
     <rect x="176" y="330" width="448" height="12" rx="5" fill="#C9A227"/>
     <!-- 車体（Porsche 987 Cayman／キャララホワイト・右向き：丸いルーフとリアハッチ、ウイングレス） -->
     <g transform="translate(832 0) scale(-1 1)">
-    <defs>
-      <linearGradient id="pBody" x1="0" y1="237" x2="0" y2="354" gradientUnits="userSpaceOnUse">
-        <stop offset="0" stop-color="#FFFFFF"/><stop offset=".22" stop-color="#F4F2EC"/>
-        <stop offset=".5" stop-color="#E9E7E2"/><stop offset=".78" stop-color="#C7C4BA"/><stop offset="1" stop-color="#97948A"/>
-      </linearGradient>
-      <linearGradient id="pGlass" x1="0" y1="239" x2="0" y2="284" gradientUnits="userSpaceOnUse">
-        <stop offset="0" stop-color="#5A6E84"/><stop offset=".5" stop-color="#22303E"/><stop offset="1" stop-color="#0C1319"/>
-      </linearGradient>
-      <radialGradient id="tireGP">
+    <g transform="translate(173.27 197.88) scale(0.5347)">
+<defs>
+<linearGradient id="bodyG" x1="0" y1="95" x2="0" y2="292" gradientUnits="userSpaceOnUse">
+  <stop offset="0" stop-color="#FFFFFF"/>
+  <stop offset=".16" stop-color="#F4F2EC"/>
+  <stop offset=".45" stop-color="#E9E7E2"/>
+  <stop offset=".78" stop-color="#9B978C"/>
+  <stop offset="1" stop-color="#97948A"/>
+</linearGradient>
+<linearGradient id="glassG" x1="0" y1="98" x2="0" y2="166" gradientUnits="userSpaceOnUse">
+  <stop offset="0" stop-color="#5A6E84"/>
+  <stop offset=".45" stop-color="#22303E"/>
+  <stop offset="1" stop-color="#0C1319"/>
+</linearGradient>
+<linearGradient id="wingG" x1="0" y1="104" x2="0" y2="126" gradientUnits="userSpaceOnUse">
+  <stop offset="0" stop-color="#4A5058"/>
+  <stop offset=".5" stop-color="#1E2126"/>
+  <stop offset="1" stop-color="#0D0F12"/>
+</linearGradient>
+<radialGradient id="tireG">
   <stop offset=".55" stop-color="#131418"/>
   <stop offset=".8" stop-color="#212329"/>
   <stop offset=".93" stop-color="#0B0C0E"/>
   <stop offset="1" stop-color="#050506"/>
 </radialGradient>
-<linearGradient id="rimGP" x1="0" y1="0" x2="1" y2="1">
+<linearGradient id="rimG" x1="0" y1="0" x2="1" y2="1">
   <stop offset="0" stop-color="#EED98B"/>
   <stop offset=".5" stop-color="#C9A227"/>
   <stop offset="1" stop-color="#8A6E16"/>
 </linearGradient>
-<filter id="softGP" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="6"/></filter>
-      <clipPath id="pClip"><path d="M226 336 C222 335 220 332 220 328 L219 314 C219 306 222 299 228 294 C236 288 248 284 262 282 C276 280 292 279 306 280 C318 281 328 282 336 284 C346 269 359 255 374 247 C384 241 396 238 407 239 C418 240 428 244 436 249 C452 259 468 269 482 277 C494 283 508 287 522 290 C540 293 556 296 570 300 C588 305 600 311 604 318 C607 324 606 330 600 334 C597 336 593 336 589 336 L554 336 A 30 30 0 0 0 494 336 L338 336 A 30 30 0 0 0 278 336 Z"/></clipPath>
-      <clipPath id="pGlassClip"><path d="M342 283 C352 268 364 256 378 249 C388 244 398 242 408 243 C418 244 427 248 434 253 C448 262 462 272 474 279 C428 281 384 282 342 283 Z"/></clipPath>
-    </defs>
-    <path d="M226 336 C222 335 220 332 220 328 L219 314 C219 306 222 299 228 294 C236 288 248 284 262 282 C276 280 292 279 306 280 C318 281 328 282 336 284 C346 269 359 255 374 247 C384 241 396 238 407 239 C418 240 428 244 436 249 C452 259 468 269 482 277 C494 283 508 287 522 290 C540 293 556 296 570 300 C588 305 600 311 604 318 C607 324 606 330 600 334 C597 336 593 336 589 336 L554 336 A 30 30 0 0 0 494 336 L338 336 A 30 30 0 0 0 278 336 Z" fill="url(#pBody)" stroke="#8E8B80" stroke-width="2"/>
-    <g clip-path="url(#pClip)">
-      <rect x="210" y="326" width="400" height="14" fill="#000" opacity=".22"/>
-      <circle cx="308" cy="330" r="34" fill="none" stroke="#000" stroke-width="9" opacity=".28"/>
-      <circle cx="524" cy="330" r="34" fill="none" stroke="#000" stroke-width="9" opacity=".28"/>
-      <path d="M262 282 C278 280 294 279 308 280 L308 284 C294 283 278 284 264 286 Z" fill="#FFF" opacity=".5"/>
-      <path d="M480 278 C500 284 522 289 544 293 L542 297 C520 293 498 288 478 282 Z" fill="#FFF" opacity=".35"/>
-      <path d="M226 300 C300 296 420 296 500 300 L500 316 C420 310 300 310 226 316 Z" fill="#8E8B82" opacity=".18"/>
-    </g>
-    <g fill="none" stroke="#B5B2A8" stroke-width="1.6" opacity=".95">
-      <path d="M340 286 C338 302 338 318 340 334"/>
-      <path d="M460 292 C459 306 459 320 461 334"/>
-      <path d="M336 285 C326 282 316 281 306 281"/>
-    </g>
-    <path d="M284 311 A 28 28 0 0 1 332 309" fill="none" stroke="#B5B2A8" stroke-width="1.6"/>
-    <path d="M498 306 A 30 30 0 0 1 550 309" fill="none" stroke="#B5B2A8" stroke-width="1.6"/>
-    <path d="M342 283 C352 268 364 256 378 249 C388 244 398 242 408 243 C418 244 427 248 434 253 C448 262 462 272 474 279 C428 281 384 282 342 283 Z" fill="url(#pGlass)" stroke="#8A929C" stroke-width="1.8"/>
-    <g clip-path="url(#pGlassClip)">
-      <path d="M382 248 L400 246 L368 282 L352 282 Z" fill="#FFF" opacity=".14"/>
-    </g>
-    <line x1="430" y1="252" x2="436" y2="277" stroke="#38424C" stroke-width="2"/>
-    <!-- サイドインテーク -->
-    <path d="M462 292 L486 289 L490 312 L468 314 Z" fill="#0C0D10"/>
-    <path d="M466 296 L486 293 M467 303 L487 300" stroke="#1E2126" stroke-width="1.6" fill="none"/>
-    <rect x="396" y="292" width="16" height="5" rx="2.5" fill="#D5D2C9" stroke="#8E8B80" stroke-width="1"/>
-    <!-- ランプ類 -->
-    <ellipse cx="246" cy="292" rx="13" ry="7" fill="#E8D9A0" stroke="#B9A75E" stroke-width="1.5" transform="rotate(-22 246 292)"/>
-    <circle cx="242" cy="294" r="3.5" fill="#FFF7DE" stroke="#8A7A3C" stroke-width="1"/>
-    <rect x="596" y="315" width="10" height="6" rx="2.5" fill="#F35B45" opacity=".5" filter="url(#softGP)"/>
-    <rect x="596" y="315" width="10" height="6" rx="2.5" fill="#F35B45"/>
-    <!-- フロント下部・ロッカー -->
-    <path d="M222 324 L246 321 L247 331 L223 333 Z" fill="#0C0D10"/>
-    <path d="M340 330 L460 330 L460 336 L340 336 Z" fill="#0C0D10"/>
+<filter id="softG" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="6"/></filter>
+<clipPath id="bodyClip"><path d="M75 246 C66 243 62 235 62 226 C62 219 64 213 68 209 C74 202 84 196 96 192 C114 184 138 177 164 172 C192 165 224 159 252 157 C282 155 312 156 338 159 C362 161 386 163 404 166 C436 152 470 133 504 120 C522 113 542 107 560 105 C588 100 618 97 645 98 C672 99 696 103 716 109 C728 115 740 123 750 132 C758 139 766 146 774 150 C786 155 798 157 808 160 C816 162 822 166 825 172 C828 182 829 198 827 212 C825 224 821 233 814 238 L788 243 C778 247 766 249 754 249 L726 250 A 70 70 0 0 0 586 250 L560 252 C520 253 480 253 440 252 L322 252 A 70 70 0 0 0 182 252 L118 250 C100 249 84 248 75 246 Z"/></clipPath>
+<clipPath id="glassClip"><path d="M416 163 C446 147 480 131 510 120 C530 113 548 109 564 108 C592 105 620 104 646 105 C668 106 688 110 706 116 C718 121 730 128 740 136 L742 139 C716 142 690 144 660 146 C600 151 520 158 460 162 C444 163 428 164 416 163 Z"/></clipPath>
+</defs>
+<g class="body-bob">
+
+<!-- ボディ（写真トレース輪郭） -->
+<path d="M75 246 C66 243 62 235 62 226 C62 219 64 213 68 209 C74 202 84 196 96 192 C114 184 138 177 164 172 C192 165 224 159 252 157 C282 155 312 156 338 159 C362 161 386 163 404 166 C436 152 470 133 504 120 C522 113 542 107 560 105 C588 100 618 97 645 98 C672 99 696 103 716 109 C728 115 740 123 750 132 C758 139 766 146 774 150 C786 155 798 157 808 160 C816 162 822 166 825 172 C828 182 829 198 827 212 C825 224 821 233 814 238 L788 243 C778 247 766 249 754 249 L726 250 A 70 70 0 0 0 586 250 L560 252 C520 253 480 253 440 252 L322 252 A 70 70 0 0 0 182 252 L118 250 C100 249 84 248 75 246 Z" fill="url(#bodyG)" stroke="#8E8B80" stroke-width="2.5"/>
+<g clip-path="url(#bodyClip)">
+  <rect x="50" y="222" width="850" height="40" fill="#000" opacity=".32"/>
+  <circle cx="252" cy="248" r="74" fill="none" stroke="#000" stroke-width="14" opacity=".4"/>
+  <circle cx="656" cy="248" r="74" fill="none" stroke="#000" stroke-width="14" opacity=".4"/>
+  <path d="M96 194 C150 178 220 165 300 160 L300 167 C224 170 154 182 100 198 Z" fill="#FFF" opacity=".12"/>
+  <path d="M420 168 C510 162 620 154 730 147 L730 152 C620 160 510 168 420 173 Z" fill="#FFF" opacity=".10"/>
+  <rect x="50" y="150" width="34" height="110" fill="#000" opacity=".16"/>
+</g>
+<!-- パネルシーム（フランク・ドア） -->
+<g fill="none" stroke="#B5B2A8" stroke-width="1.8" opacity=".9">
+  <path d="M176 180 C232 163 292 157 348 160"/>
+  <path d="M432 168 C430 196 430 224 433 250"/>
+  <path d="M570 152 C570 184 572 218 576 248"/>
+</g>
+<!-- DLOガラス -->
+<path d="M416 163 C446 147 480 131 510 120 C530 113 548 109 564 108 C592 105 620 104 646 105 C668 106 688 110 706 116 C718 121 730 128 740 136 L742 139 C716 142 690 144 660 146 C600 151 520 158 460 162 C444 163 428 164 416 163 Z" fill="url(#glassG)" stroke="#98A0AA" stroke-width="2"/>
+<g clip-path="url(#glassClip)">
+  <path d="M470 130 L502 122 L448 164 L420 164 Z" fill="#FFF" opacity=".14"/>
+  <path d="M560 108 L580 107 L520 158 L498 160 Z" fill="#FFF" opacity=".10"/>
+</g>
+<line x1="660" y1="107" x2="668" y2="145" stroke="#38424C" stroke-width="3"/>
+<!-- リアクォーターインテーク -->
+<path d="M596 208 L640 202 L646 240 L604 244 Z" fill="#0C0D10"/>
+<path d="M602 214 L638 209 M604 226 L640 221" stroke="#1E2126" stroke-width="3" fill="none"/>
+<path d="M596 208 L640 202 L641 207 L597 213 Z" fill="#FFF" opacity=".12"/>
+<!-- ドアハンドル・ミラー -->
+<rect x="494" y="168" width="26" height="7" rx="3.5" fill="#D5D2C9" stroke="#9B978C" stroke-width="1.2"/>
+<path d="M424 162 L415 153" stroke="#1A1C20" stroke-width="3"/>
+<rect x="398" y="145" width="20" height="12" rx="4" fill="#D5D2C9" stroke="#9B978C" stroke-width="1.2" transform="rotate(-12 408 151)"/>
+<rect x="399" y="148" width="9" height="7" rx="2" fill="#141A20" transform="rotate(-12 403 151)"/>
+<!-- フロント：ヘッドライト・インテーク・スプリッター -->
+<path d="M120 208 C118 200 122 192 130 188 C144 182 158 179 168 181 C174 183 176 188 173 193 C166 202 148 210 132 212 C127 212 122 211 120 208 Z" fill="#E8D9A0" stroke="#B9A75E" stroke-width="2"/>
+<circle cx="138" cy="197" r="5.5" fill="#FFF7DE" stroke="#8A7A3C" stroke-width="1.5"/>
+<circle cx="157" cy="190" r="4.5" fill="#FFF7DE" stroke="#8A7A3C" stroke-width="1.2"/>
+<path d="M76 219 L128 213 L132 238 L80 242 Z" fill="#0C0D10"/>
+<path d="M82 222 L126 217 M83 230 L128 225" stroke="#1E2126" stroke-width="2.5" fill="none"/>
+<path d="M64 240 L160 240 L166 248 L72 250 Z" fill="#050607"/>
+<!-- リア：テールランプ・ディフューザー -->
+<path d="M796 168 C806 166 816 166 823 169 L824 184 C817 181 807 180 797 182 Z" fill="#F35B45" opacity=".5" filter="url(#softG)"/>
+<path d="M796 168 C806 166 816 166 823 169 L824 184 C817 181 807 180 797 182 Z" fill="#F35B45" stroke="#A03428" stroke-width="1"/>
+<path d="M752 240 L810 236 C814 244 811 250 803 252 L758 254 C752 250 750 245 752 240 Z" fill="#0C0D10"/>
+<path d="M766 242 L766 252 M780 241 L780 251 M794 240 L794 250" stroke="#1E2126" stroke-width="2.5" fill="none"/>
+<!-- ロッカー -->
+<path d="M330 248 L566 250 L566 255 L330 254 Z" fill="#0C0D10"/>
+</g>
 <g>
-<circle cx="308" cy="330" r="28.0" fill="url(#tireGP)"/>
-<circle cx="308" cy="330" r="28.0" fill="none" stroke="#000" stroke-width="0.7" opacity=".6"/>
-<circle cx="308" cy="330" r="18.5" fill="#08090B"/>
-<circle cx="308" cy="330" r="11.4" fill="#575B60"/>
-<circle cx="308" cy="330" r="11.4" fill="none" stroke="#3E4247" stroke-width="0.9"/>
-<circle cx="308" cy="330" r="6.3" fill="#34373B"/>
-<rect x="295.2" y="325.7" width="3.3" height="8.5" rx="1.4" fill="#C9A227" stroke="#7E6414" stroke-width="0.6"/>
-<g class="wheelless">
-<circle cx="308" cy="330" r="17.1" fill="none" stroke="url(#rimGP)" stroke-width="2.1"/>
-<line x1="312.0" y1="330.7" x2="324.3" y2="328.9" stroke="url(#rimGP)" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="310.8" y1="332.9" x2="321.9" y2="338.7" stroke="url(#rimGP)" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="308.6" y1="334.0" x2="314.1" y2="345.2" stroke="url(#rimGP)" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="306.1" y1="333.6" x2="304.0" y2="345.9" stroke="url(#rimGP)" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="304.4" y1="331.8" x2="295.4" y2="340.5" stroke="url(#rimGP)" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="304.0" y1="329.3" x2="291.7" y2="331.1" stroke="url(#rimGP)" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="305.2" y1="327.1" x2="294.1" y2="321.3" stroke="url(#rimGP)" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="307.4" y1="326.0" x2="301.9" y2="314.8" stroke="url(#rimGP)" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="309.9" y1="326.4" x2="312.0" y2="314.1" stroke="url(#rimGP)" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="311.6" y1="328.2" x2="320.6" y2="319.5" stroke="url(#rimGP)" stroke-width="1.5" stroke-linecap="round"/>
-<circle cx="308" cy="330" r="4.0" fill="#C9A227" stroke="#7E6414" stroke-width="0.7"/>
-<circle cx="308" cy="330" r="1.7" fill="#3A3020"/>
+<circle cx="252" cy="240" r="52.0" fill="url(#tireG)"/>
+<circle cx="252" cy="240" r="52.0" fill="none" stroke="#000" stroke-width="1.3" opacity=".6"/>
+<circle cx="252" cy="240" r="34.4" fill="#08090B"/>
+<circle cx="252" cy="240" r="21.1" fill="#575B60"/>
+<circle cx="252" cy="240" r="21.1" fill="none" stroke="#3E4247" stroke-width="1.8"/>
+<circle cx="252" cy="240" r="11.6" fill="#34373B"/>
+<rect x="228.2" y="232.1" width="6.2" height="15.9" rx="2.6" fill="#C9A227" stroke="#7E6414" stroke-width="1.1"/>
+<g class="wheel">
+<circle cx="252" cy="240" r="31.7" fill="none" stroke="url(#rimG)" stroke-width="4.0"/>
+<line x1="259.4" y1="241.3" x2="282.3" y2="237.9" stroke="url(#rimG)" stroke-width="2.8" stroke-linecap="round"/>
+<line x1="257.2" y1="245.4" x2="277.8" y2="256.1" stroke="url(#rimG)" stroke-width="2.8" stroke-linecap="round"/>
+<line x1="253.0" y1="247.4" x2="263.4" y2="268.2" stroke="url(#rimG)" stroke-width="2.8" stroke-linecap="round"/>
+<line x1="248.5" y1="246.6" x2="244.6" y2="269.5" stroke="url(#rimG)" stroke-width="2.8" stroke-linecap="round"/>
+<line x1="245.3" y1="243.3" x2="228.7" y2="259.5" stroke="url(#rimG)" stroke-width="2.8" stroke-linecap="round"/>
+<line x1="244.6" y1="238.7" x2="221.7" y2="242.1" stroke="url(#rimG)" stroke-width="2.8" stroke-linecap="round"/>
+<line x1="246.8" y1="234.6" x2="226.2" y2="223.9" stroke="url(#rimG)" stroke-width="2.8" stroke-linecap="round"/>
+<line x1="251.0" y1="232.6" x2="240.6" y2="211.8" stroke="url(#rimG)" stroke-width="2.8" stroke-linecap="round"/>
+<line x1="255.5" y1="233.4" x2="259.4" y2="210.5" stroke="url(#rimG)" stroke-width="2.8" stroke-linecap="round"/>
+<line x1="258.7" y1="236.7" x2="275.3" y2="220.5" stroke="url(#rimG)" stroke-width="2.8" stroke-linecap="round"/>
+<circle cx="252" cy="240" r="7.5" fill="#C9A227" stroke="#7E6414" stroke-width="1.3"/>
+<circle cx="252" cy="240" r="3.1" fill="#3A3020"/>
 </g></g>
 <g>
-<circle cx="524" cy="330" r="28.0" fill="url(#tireGP)"/>
-<circle cx="524" cy="330" r="28.0" fill="none" stroke="#000" stroke-width="0.7" opacity=".6"/>
-<circle cx="524" cy="330" r="18.5" fill="#08090B"/>
-<circle cx="524" cy="330" r="11.4" fill="#575B60"/>
-<circle cx="524" cy="330" r="11.4" fill="none" stroke="#3E4247" stroke-width="0.9"/>
-<circle cx="524" cy="330" r="6.3" fill="#34373B"/>
-<rect x="511.2" y="325.7" width="3.3" height="8.5" rx="1.4" fill="#C9A227" stroke="#7E6414" stroke-width="0.6"/>
-<g class="wheelless">
-<circle cx="524" cy="330" r="17.1" fill="none" stroke="url(#rimGP)" stroke-width="2.1"/>
-<line x1="528.0" y1="330.7" x2="540.3" y2="328.9" stroke="url(#rimGP)" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="526.8" y1="332.9" x2="537.9" y2="338.7" stroke="url(#rimGP)" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="524.6" y1="334.0" x2="530.1" y2="345.2" stroke="url(#rimGP)" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="522.1" y1="333.6" x2="520.0" y2="345.9" stroke="url(#rimGP)" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="520.4" y1="331.8" x2="511.4" y2="340.5" stroke="url(#rimGP)" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="520.0" y1="329.3" x2="507.7" y2="331.1" stroke="url(#rimGP)" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="521.2" y1="327.1" x2="510.1" y2="321.3" stroke="url(#rimGP)" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="523.4" y1="326.0" x2="517.9" y2="314.8" stroke="url(#rimGP)" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="525.9" y1="326.4" x2="528.0" y2="314.1" stroke="url(#rimGP)" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="527.6" y1="328.2" x2="536.6" y2="319.5" stroke="url(#rimGP)" stroke-width="1.5" stroke-linecap="round"/>
-<circle cx="524" cy="330" r="4.0" fill="#C9A227" stroke="#7E6414" stroke-width="0.7"/>
-<circle cx="524" cy="330" r="1.7" fill="#3A3020"/>
+<circle cx="656" cy="240" r="52.0" fill="url(#tireG)"/>
+<circle cx="656" cy="240" r="52.0" fill="none" stroke="#000" stroke-width="1.3" opacity=".6"/>
+<circle cx="656" cy="240" r="34.4" fill="#08090B"/>
+<circle cx="656" cy="240" r="21.1" fill="#575B60"/>
+<circle cx="656" cy="240" r="21.1" fill="none" stroke="#3E4247" stroke-width="1.8"/>
+<circle cx="656" cy="240" r="11.6" fill="#34373B"/>
+<rect x="632.2" y="232.1" width="6.2" height="15.9" rx="2.6" fill="#C9A227" stroke="#7E6414" stroke-width="1.1"/>
+<g class="wheel">
+<circle cx="656" cy="240" r="31.7" fill="none" stroke="url(#rimG)" stroke-width="4.0"/>
+<line x1="663.4" y1="241.3" x2="686.3" y2="237.9" stroke="url(#rimG)" stroke-width="2.8" stroke-linecap="round"/>
+<line x1="661.2" y1="245.4" x2="681.8" y2="256.1" stroke="url(#rimG)" stroke-width="2.8" stroke-linecap="round"/>
+<line x1="657.0" y1="247.4" x2="667.4" y2="268.2" stroke="url(#rimG)" stroke-width="2.8" stroke-linecap="round"/>
+<line x1="652.5" y1="246.6" x2="648.6" y2="269.5" stroke="url(#rimG)" stroke-width="2.8" stroke-linecap="round"/>
+<line x1="649.3" y1="243.3" x2="632.7" y2="259.5" stroke="url(#rimG)" stroke-width="2.8" stroke-linecap="round"/>
+<line x1="648.6" y1="238.7" x2="625.7" y2="242.1" stroke="url(#rimG)" stroke-width="2.8" stroke-linecap="round"/>
+<line x1="650.8" y1="234.6" x2="630.2" y2="223.9" stroke="url(#rimG)" stroke-width="2.8" stroke-linecap="round"/>
+<line x1="655.0" y1="232.6" x2="644.6" y2="211.8" stroke="url(#rimG)" stroke-width="2.8" stroke-linecap="round"/>
+<line x1="659.5" y1="233.4" x2="663.4" y2="210.5" stroke="url(#rimG)" stroke-width="2.8" stroke-linecap="round"/>
+<line x1="662.7" y1="236.7" x2="679.3" y2="220.5" stroke="url(#rimG)" stroke-width="2.8" stroke-linecap="round"/>
+<circle cx="656" cy="240" r="7.5" fill="#C9A227" stroke="#7E6414" stroke-width="1.3"/>
+<circle cx="656" cy="240" r="3.1" fill="#3A3020"/>
 </g></g>
+    </g>
     </g>
   </g>
 
