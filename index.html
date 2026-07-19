@@ -82,17 +82,13 @@
     <div class="hero__bg hero3d" aria-hidden="true">
       <div class="hero3d__streaks"><i class="s1"></i><i class="s2"></i><i class="s3"></i><i class="s4"></i><i class="s5"></i><i class="s6"></i></div>
       <div class="hero3d__road">
-        <div class="hero3d__lane hero3d__lane--far"></div>
         <div class="hero3d__lane"></div>
       </div>
       <svg class="hero3d__car" viewBox="0 0 900 320">
-        <g stroke-linecap="round" fill="none" opacity=".65">
-          <path class="speedline" d="M880 40H430" stroke="#21D4FD" stroke-width="3"/>
-          <path class="speedline" d="M900 62H560" stroke="#E8D9A0" stroke-width="2" style="animation-delay:.18s"/>
-        </g>
+        <!-- 右向き表示のため左右反転 -->
         <g transform="translate(900 0) scale(-1 1)">
         <ellipse cx="450" cy="296" rx="370" ry="14" fill="#000" opacity=".6"/>
-        <!-- 車体：PORSCHE Cayman GT4／カーマインレッド（実写トレース） -->
+        <!-- 車体：PORSCHE Cayman GT4／カーマインレッド（実写トレース・オーナー車仕様） -->
 <defs>
 <linearGradient id="bodyG" x1="0" y1="95" x2="0" y2="292" gradientUnits="userSpaceOnUse">
   <stop offset="0" stop-color="#E25A74"/>
@@ -106,10 +102,10 @@
   <stop offset=".45" stop-color="#22303E"/>
   <stop offset="1" stop-color="#0C1319"/>
 </linearGradient>
-<linearGradient id="wingG" x1="0" y1="104" x2="0" y2="126" gradientUnits="userSpaceOnUse">
-  <stop offset="0" stop-color="#4A5058"/>
-  <stop offset=".5" stop-color="#1E2126"/>
-  <stop offset="1" stop-color="#0D0F12"/>
+<linearGradient id="wingG" x1="0" y1="106" x2="0" y2="128" gradientUnits="userSpaceOnUse">
+  <stop offset="0" stop-color="#D64C66"/>
+  <stop offset=".5" stop-color="#AB1631"/>
+  <stop offset="1" stop-color="#6E0E20"/>
 </linearGradient>
 <radialGradient id="tireG">
   <stop offset=".55" stop-color="#131418"/>
@@ -123,24 +119,25 @@
   <stop offset="1" stop-color="#8A6E16"/>
 </linearGradient>
 <filter id="softG" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="6"/></filter>
-<clipPath id="bodyClip"><path d="M75 246 C66 243 62 235 62 226 C62 219 64 213 68 209 C74 202 84 196 96 192 C114 184 138 177 164 172 C192 165 224 159 252 157 C282 155 312 156 338 159 C362 161 386 163 404 166 C436 152 470 133 504 120 C522 113 542 107 560 105 C588 100 618 97 645 98 C672 99 696 103 716 109 C728 115 740 123 750 132 C758 139 766 146 774 150 C786 155 798 157 808 160 C816 162 822 166 825 172 C828 182 829 198 827 212 C825 224 821 233 814 238 L788 243 C778 247 766 249 754 249 L726 250 A 70 70 0 0 0 586 250 L560 252 C520 253 480 253 440 252 L322 252 A 70 70 0 0 0 182 252 L118 250 C100 249 84 248 75 246 Z"/></clipPath>
-<clipPath id="glassClip"><path d="M416 163 C446 147 480 131 510 120 C530 113 548 109 564 108 C592 105 620 104 646 105 C668 106 688 110 706 116 C718 121 730 128 740 136 L742 139 C716 142 690 144 660 146 C600 151 520 158 460 162 C444 163 428 164 416 163 Z"/></clipPath>
+<clipPath id="bodyClip"><path d="M75 246 C66 243 62 235 62 226 C62 219 64 213 68 209 C74 202 84 196 96 192 C114 184 138 177 164 172 C192 165 224 159 252 157 C282 155 312 156 338 159 C362 161 386 163 404 166 C436 152 470 133 504 120 C522 112 542 106 558 103 C586 97 616 94 644 96 C670 97 694 101 716 108 C728 115 740 123 750 132 C758 139 766 146 774 150 C786 155 798 157 808 160 C816 162 822 166 825 172 C828 182 829 198 827 212 C825 224 821 233 814 238 L788 243 C778 247 766 249 754 249 L726 250 A 70 70 0 0 0 586 250 L560 252 C520 253 480 253 440 252 L322 252 A 70 70 0 0 0 182 252 L118 250 C100 249 84 248 75 246 Z"/></clipPath>
+<clipPath id="glassClip"><path d="M416 163 C446 147 480 131 510 120 C530 113 548 109 564 108 C590 102 620 101 646 102 C668 103 688 107 706 114 C718 121 730 128 740 136 L742 139 C716 142 690 144 660 146 C600 151 520 158 460 162 C444 163 428 164 416 163 Z"/></clipPath>
 </defs>
 <g class="body-bob">
 <path d="M104 186 L-20 168 v52 z" fill="#E8D9A0" opacity=".25"/>
 <!-- スワンネックウイング -->
 <path d="M778 156 C774 140 777 126 786 117 L796 117 C788 127 785 141 789 154 Z" fill="#1A1C20"/>
 <path d="M806 152 C803 138 806 126 814 117 L823 117 C816 127 813 139 816 150 Z" fill="#1A1C20"/>
-<path d="M745 116 L826 108 L830 120 L749 128 Z" fill="url(#wingG)" stroke="#08090B" stroke-width="2"/>
-<path d="M746 116 L826 108 L827 112 L747 120 Z" fill="#6A7178" opacity=".6"/>
+<path d="M745 116 L826 108 L830 120 L749 128 Z" fill="url(#wingG)" stroke="#5E0A1C" stroke-width="2"/>
+<path d="M746 116 L826 108 L827 112 L747 120 Z" fill="#E88A9C" opacity=".55"/>
 <!-- ボディ（写真トレース輪郭） -->
-<path d="M75 246 C66 243 62 235 62 226 C62 219 64 213 68 209 C74 202 84 196 96 192 C114 184 138 177 164 172 C192 165 224 159 252 157 C282 155 312 156 338 159 C362 161 386 163 404 166 C436 152 470 133 504 120 C522 113 542 107 560 105 C588 100 618 97 645 98 C672 99 696 103 716 109 C728 115 740 123 750 132 C758 139 766 146 774 150 C786 155 798 157 808 160 C816 162 822 166 825 172 C828 182 829 198 827 212 C825 224 821 233 814 238 L788 243 C778 247 766 249 754 249 L726 250 A 70 70 0 0 0 586 250 L560 252 C520 253 480 253 440 252 L322 252 A 70 70 0 0 0 182 252 L118 250 C100 249 84 248 75 246 Z" fill="url(#bodyG)" stroke="#4E0817" stroke-width="2.5"/>
+<path d="M75 246 C66 243 62 235 62 226 C62 219 64 213 68 209 C74 202 84 196 96 192 C114 184 138 177 164 172 C192 165 224 159 252 157 C282 155 312 156 338 159 C362 161 386 163 404 166 C436 152 470 133 504 120 C522 112 542 106 558 103 C586 97 616 94 644 96 C670 97 694 101 716 108 C728 115 740 123 750 132 C758 139 766 146 774 150 C786 155 798 157 808 160 C816 162 822 166 825 172 C828 182 829 198 827 212 C825 224 821 233 814 238 L788 243 C778 247 766 249 754 249 L726 250 A 70 70 0 0 0 586 250 L560 252 C520 253 480 253 440 252 L322 252 A 70 70 0 0 0 182 252 L118 250 C100 249 84 248 75 246 Z" fill="url(#bodyG)" stroke="#4E0817" stroke-width="2.5"/>
 <g clip-path="url(#bodyClip)">
   <rect x="50" y="222" width="850" height="40" fill="#000" opacity=".32"/>
   <circle cx="252" cy="248" r="74" fill="none" stroke="#000" stroke-width="14" opacity=".4"/>
   <circle cx="656" cy="248" r="74" fill="none" stroke="#000" stroke-width="14" opacity=".4"/>
   <path d="M96 194 C150 178 220 165 300 160 L300 167 C224 170 154 182 100 198 Z" fill="#FFF" opacity=".12"/>
   <path d="M420 168 C510 162 620 154 730 147 L730 152 C620 160 510 168 420 173 Z" fill="#FFF" opacity=".10"/>
+  <path d="M556 152 C596 142 640 136 686 138 C712 140 734 146 750 154 L748 158 C730 150 710 145 686 143 C642 141 598 147 560 156 Z" fill="#FFF" opacity=".10"/>
   <rect x="50" y="150" width="34" height="110" fill="#000" opacity=".16"/>
 </g>
 <!-- パネルシーム（フランク・ドア） -->
@@ -150,7 +147,7 @@
   <path d="M570 152 C570 184 572 218 576 248"/>
 </g>
 <!-- DLOガラス -->
-<path d="M416 163 C446 147 480 131 510 120 C530 113 548 109 564 108 C592 105 620 104 646 105 C668 106 688 110 706 116 C718 121 730 128 740 136 L742 139 C716 142 690 144 660 146 C600 151 520 158 460 162 C444 163 428 164 416 163 Z" fill="url(#glassG)" stroke="#98A0AA" stroke-width="2"/>
+<path d="M416 163 C446 147 480 131 510 120 C530 113 548 109 564 108 C590 102 620 101 646 102 C668 103 688 107 706 114 C718 121 730 128 740 136 L742 139 C716 142 690 144 660 146 C600 151 520 158 460 162 C444 163 428 164 416 163 Z" fill="url(#glassG)" stroke="#98A0AA" stroke-width="2"/>
 <g clip-path="url(#glassClip)">
   <path d="M470 130 L502 122 L448 164 L420 164 Z" fill="#FFF" opacity=".14"/>
   <path d="M560 108 L580 107 L520 158 L498 160 Z" fill="#FFF" opacity=".10"/>
