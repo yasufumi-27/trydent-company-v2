@@ -539,14 +539,21 @@ p { margin: 0 0 1em; }
 @keyframes hero-lane { to { background-position-x: 260px; } }
 .hero3d__lane--far { top: 8%; height: 4px; opacity: .25; }
 .hero3d .hero3d__car {
-  position: absolute; left: 50%; bottom: 8%; width: min(620px, 78vw); height: auto;
-  transform: translateX(-50%); z-index: 1; opacity: 1;
+  position: absolute; left: 50%; bottom: 8%; width: min(620px, 78vw);
+  aspect-ratio: 490 / 149;
+  transform: translateX(-50%); z-index: 1;
   filter: drop-shadow(0 26px 20px rgba(0,0,0,.6));
   animation: hero-bob 1.3s ease-in-out infinite;
 }
 @keyframes hero-bob { 50% { transform: translateX(-50%) translateY(3px); } }
+.hero3d .hero3d__car img { position: absolute; width: 100%; height: auto; opacity: 1; }
+.hero3d .hero3d__body { left: 0; top: 0; }
+.hero3d .hero3d__car .hero3d__wheel { border-radius: 50%; animation: hero-wheel .5s linear infinite; }
+.hero3d .hero3d__car .hero3d__wheel--f { left: 3.47%; top: 47.65%; width: 14.69%; }
+.hero3d .hero3d__car .hero3d__wheel--r { left: 57.76%; top: 42.95%; width: 17.14%; }
+@keyframes hero-wheel { to { transform: rotate(-360deg); } }
 @media (prefers-reduced-motion: reduce) {
-  .hero3d__streaks i, .hero3d__road, .hero3d__lane, .hero3d__car { animation: none; }
+  .hero3d__streaks i, .hero3d__road, .hero3d__lane, .hero3d__car, .hero3d__wheel { animation: none; }
 }
 
 /* ============================================================
