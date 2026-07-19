@@ -86,8 +86,45 @@
       </div>
       <div class="hero3d__car">
         <img class="hero3d__body" src="assets/img/hero-car-toon.png" alt="">
-        <img class="hero3d__wheel hero3d__wheel--f" src="assets/img/hero-wheel-f.png" alt="">
-        <img class="hero3d__wheel hero3d__wheel--r" src="assets/img/hero-wheel-r.png" alt="">
+        <svg class="hero3d__wheel hero3d__wheel--f" viewBox="-50 -50 100 100" aria-hidden="true">
+          <defs>
+            <radialGradient id="wTire">
+              <stop offset=".60" stop-color="#111216"/>
+              <stop offset=".76" stop-color="#26282e"/>
+              <stop offset=".90" stop-color="#0a0b0d"/>
+              <stop offset="1" stop-color="#050506"/>
+            </radialGradient>
+            <linearGradient id="wGold" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#EDD9A3"/>
+              <stop offset=".5" stop-color="#C9A227"/>
+              <stop offset="1" stop-color="#8A6E16"/>
+            </linearGradient>
+            <g id="wheelArt">
+              <circle r="48" fill="url(#wTire)"/>
+              <circle r="34" fill="#14151a"/>
+              <circle r="34" fill="none" stroke="url(#wGold)" stroke-width="4"/>
+              <g fill="none" stroke="url(#wGold)" stroke-width="2.4" stroke-linecap="round">
+                <g><path d="M0 -7 L-7 -31 M0 -7 L7 -31"/></g>
+                <g transform="rotate(36)"><path d="M0 -7 L-7 -31 M0 -7 L7 -31"/></g>
+                <g transform="rotate(72)"><path d="M0 -7 L-7 -31 M0 -7 L7 -31"/></g>
+                <g transform="rotate(108)"><path d="M0 -7 L-7 -31 M0 -7 L7 -31"/></g>
+                <g transform="rotate(144)"><path d="M0 -7 L-7 -31 M0 -7 L7 -31"/></g>
+                <g transform="rotate(180)"><path d="M0 -7 L-7 -31 M0 -7 L7 -31"/></g>
+                <g transform="rotate(216)"><path d="M0 -7 L-7 -31 M0 -7 L7 -31"/></g>
+                <g transform="rotate(252)"><path d="M0 -7 L-7 -31 M0 -7 L7 -31"/></g>
+                <g transform="rotate(288)"><path d="M0 -7 L-7 -31 M0 -7 L7 -31"/></g>
+                <g transform="rotate(324)"><path d="M0 -7 L-7 -31 M0 -7 L7 -31"/></g>
+              </g>
+              <circle r="20" fill="none" stroke="url(#wGold)" stroke-width="1.4" opacity=".7"/>
+              <circle r="7" fill="url(#wGold)"/>
+              <circle r="2.8" fill="#2c2416"/>
+            </g>
+          </defs>
+          <use href="#wheelArt"/>
+        </svg>
+        <svg class="hero3d__wheel hero3d__wheel--r" viewBox="-50 -50 100 100" aria-hidden="true">
+          <use href="#wheelArt"/>
+        </svg>
       </div>
     </div>
     <div class="hero__inner">

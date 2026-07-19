@@ -548,9 +548,9 @@ p { margin: 0 0 1em; }
 @keyframes hero-bob { 50% { transform: translateX(-50%) translateY(3px); } }
 .hero3d .hero3d__car img { position: absolute; width: 100%; height: auto; opacity: 1; }
 .hero3d .hero3d__body { left: 0; top: 0; }
-.hero3d .hero3d__car .hero3d__wheel { border-radius: 50%; animation: hero-wheel .5s linear infinite; }
-.hero3d .hero3d__car .hero3d__wheel--f { left: 3.47%; top: 47.65%; width: 14.69%; }
-.hero3d .hero3d__car .hero3d__wheel--r { left: 57.76%; top: 42.95%; width: 17.14%; }
+.hero3d .hero3d__car .hero3d__wheel { position: absolute; aspect-ratio: 1; animation: hero-wheel .6s linear infinite; }
+.hero3d .hero3d__car .hero3d__wheel--f { left: 1.02%; top: 39.60%; width: 19.59%; }
+.hero3d .hero3d__car .hero3d__wheel--r { left: 55.92%; top: 36.91%; width: 20.82%; }
 @keyframes hero-wheel { to { transform: rotate(-360deg); } }
 @media (prefers-reduced-motion: reduce) {
   .hero3d__streaks i, .hero3d__road, .hero3d__lane, .hero3d__car, .hero3d__wheel { animation: none; }
