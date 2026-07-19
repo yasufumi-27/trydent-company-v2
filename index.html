@@ -78,13 +78,13 @@
 
   <!-- ======================= ファーストビュー ======================= -->
   <section class="hero">
-    <!-- 走行シーン：実写写真＋流れる光のアニメーション -->
+    <!-- 3D走行シーン：実写のオーナー車（Cayman GT4）は定位置で、路面・光跡が後方へ流れる -->
     <div class="hero__bg hero3d" aria-hidden="true">
-      <picture class="hero3d__photo">
-        <source media="(max-width: 640px)" srcset="assets/img/hero-top.png">
-        <img src="assets/img/hero-wide.png" alt="">
-      </picture>
       <div class="hero3d__streaks"><i class="s1"></i><i class="s2"></i><i class="s3"></i><i class="s4"></i><i class="s5"></i><i class="s6"></i></div>
+      <div class="hero3d__road">
+        <div class="hero3d__lane"></div>
+      </div>
+      <img class="hero3d__car" src="assets/img/hero-car.png" alt="">
     </div>
     <div class="hero__inner">
       <h1 class="hero__logo">
@@ -112,7 +112,7 @@
       <div class="service-row service-row--feature reveal">
         <div class="service-row__media">
           <span class="service-row__badge">最重要サービス</span>
-          <img src="assets/img/towing.png" alt="高級車をレッカー搬送するTRIDENT COMPANYのレッカー車">
+          <img src="assets/img/towing.svg" alt="高級車をレッカー搬送するTRIDENT COMPANYのレッカー車">
         </div>
         <div class="service-row__body">
           <span class="service-row__en">24H / 365 Days</span>
@@ -139,7 +139,7 @@
 
       <!-- 整備・修理 -->
       <div class="service-row reveal">
-        <div class="service-row__media"><img src="assets/img/maintenance.png" alt="輸入車を整備するTRIDENT COMPANYの工場"></div>
+        <div class="service-row__media"><img src="assets/img/maintenance.svg" alt="輸入車を整備するTRIDENT COMPANYの工場"></div>
         <div class="service-row__body">
           <span class="service-row__en">Maintenance & Repair</span>
           <h3 class="service-row__title">整備・修理｜外車もお任せ</h3>
@@ -152,7 +152,7 @@
 
       <!-- 板金・塗装 -->
       <div class="service-row service-row--reverse reveal">
-        <div class="service-row__media"><img src="assets/img/bodywork.png" alt="板金塗装作業中の車両"></div>
+        <div class="service-row__media"><img src="assets/img/bodywork.svg" alt="板金塗装作業中の車両"></div>
         <div class="service-row__body">
           <span class="service-row__en">Bodywork & Paint</span>
           <h3 class="service-row__title">板金・塗装｜保険修理対応</h3>
@@ -165,7 +165,7 @@
 
       <!-- カスタム -->
       <div class="service-row reveal">
-        <div class="service-row__media"><img src="assets/img/custom.png" alt="カスタムされたスポーツカー"></div>
+        <div class="service-row__media"><img src="assets/img/custom.svg" alt="カスタムされたスポーツカー"></div>
         <div class="service-row__body">
           <span class="service-row__en">Custom</span>
           <h3 class="service-row__title">カスタム｜持込パーツも相談可</h3>
@@ -178,7 +178,7 @@
 
       <!-- 販売・買取 -->
       <div class="service-row service-row--reverse reveal">
-        <div class="service-row__media"><img src="assets/img/sales.png" alt="展示された車両"></div>
+        <div class="service-row__media"><img src="assets/img/sales.svg" alt="展示された車両"></div>
         <div class="service-row__body">
           <span class="service-row__en">Sales & Purchase</span>
           <h3 class="service-row__title">販売・買取｜注文販売＆無料査定</h3>
@@ -241,12 +241,12 @@
       </div>
       <!-- 本番は Smash Balloon で公式フィードを表示（検討事項 D-3）。ここではダミー配置 -->
       <div class="ig-grid reveal">
-        <a href="https://www.instagram.com/car_20555/" target="_blank" rel="noopener"><img src="assets/img/custom-2.png" alt="Instagram投稿"></a>
-        <a href="https://www.instagram.com/car_20555/" target="_blank" rel="noopener"><img src="assets/img/sales-2.png" alt="Instagram投稿"></a>
-        <a href="https://www.instagram.com/car_20555/" target="_blank" rel="noopener"><img src="assets/img/hero-portrait.png" alt="Instagram投稿"></a>
-        <a href="https://www.instagram.com/car_20555/" target="_blank" rel="noopener"><img src="assets/img/maintenance.png" alt="Instagram投稿"></a>
-        <a href="https://www.instagram.com/car_20555/" target="_blank" rel="noopener"><img src="assets/img/bodywork.png" alt="Instagram投稿"></a>
-        <a href="https://www.instagram.com/car_20555/" target="_blank" rel="noopener"><img src="assets/img/towing.png" alt="Instagram投稿"></a>
+        <a href="https://www.instagram.com/car_20555/" target="_blank" rel="noopener"><img src="assets/img/custom-2.svg" alt="Instagram投稿"></a>
+        <a href="https://www.instagram.com/car_20555/" target="_blank" rel="noopener"><img src="assets/img/sales-2.svg" alt="Instagram投稿"></a>
+        <a href="https://www.instagram.com/car_20555/" target="_blank" rel="noopener"><img src="assets/img/hero-portrait.svg" alt="Instagram投稿"></a>
+        <a href="https://www.instagram.com/car_20555/" target="_blank" rel="noopener"><img src="assets/img/maintenance.svg" alt="Instagram投稿"></a>
+        <a href="https://www.instagram.com/car_20555/" target="_blank" rel="noopener"><img src="assets/img/bodywork.svg" alt="Instagram投稿"></a>
+        <a href="https://www.instagram.com/car_20555/" target="_blank" rel="noopener"><img src="assets/img/towing.svg" alt="Instagram投稿"></a>
       </div>
       <div class="ig-note">
         <a href="https://www.instagram.com/car_20555/" target="_blank" rel="noopener" class="btn btn--ghost">@CAR_20555 をフォローする</a>
