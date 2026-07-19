@@ -87,22 +87,22 @@
       <svg class="hero3d__car" viewBox="0 0 900 320">
         <!-- 右向き表示のため左右反転 -->
         <g transform="translate(900 0) scale(-1 1)">
-        <ellipse cx="450" cy="296" rx="370" ry="14" fill="#000" opacity=".6"/>
-        <!-- 車体：PORSCHE Cayman GT4／カーマインレッド（実写トレース・オーナー車仕様） -->
+        <ellipse cx="420" cy="296" rx="350" ry="14" fill="#000" opacity=".6"/>
+        <!-- 車体：PORSCHE Cayman GT4／カーマインレッド（オーナー車実写重ね合わせ版） -->
 <defs>
-<linearGradient id="bodyG" x1="0" y1="95" x2="0" y2="292" gradientUnits="userSpaceOnUse">
+<linearGradient id="bodyG" x1="0" y1="68" x2="0" y2="292" gradientUnits="userSpaceOnUse">
   <stop offset="0" stop-color="#E25A74"/>
   <stop offset=".16" stop-color="#C93B57"/>
   <stop offset=".45" stop-color="#AB1631"/>
   <stop offset=".78" stop-color="#7C1024"/>
   <stop offset="1" stop-color="#4E0817"/>
 </linearGradient>
-<linearGradient id="glassG" x1="0" y1="98" x2="0" y2="166" gradientUnits="userSpaceOnUse">
+<linearGradient id="glassG" x1="0" y1="72" x2="0" y2="166" gradientUnits="userSpaceOnUse">
   <stop offset="0" stop-color="#5A6E84"/>
   <stop offset=".45" stop-color="#22303E"/>
   <stop offset="1" stop-color="#0C1319"/>
 </linearGradient>
-<linearGradient id="wingG" x1="0" y1="106" x2="0" y2="128" gradientUnits="userSpaceOnUse">
+<linearGradient id="wingG" x1="0" y1="100" x2="0" y2="128" gradientUnits="userSpaceOnUse">
   <stop offset="0" stop-color="#D64C66"/>
   <stop offset=".5" stop-color="#AB1631"/>
   <stop offset="1" stop-color="#6E0E20"/>
@@ -119,63 +119,64 @@
   <stop offset="1" stop-color="#8A6E16"/>
 </linearGradient>
 <filter id="softG" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="6"/></filter>
-<clipPath id="bodyClip"><path d="M75 246 C66 243 62 235 62 226 C62 219 64 213 68 209 C74 202 84 196 96 192 C114 184 138 177 164 172 C192 165 224 159 252 157 C282 155 312 156 338 159 C362 161 386 163 404 166 C436 152 470 133 504 120 C522 112 542 106 558 103 C586 97 616 94 644 96 C670 97 694 101 716 108 C728 115 740 123 750 132 C758 139 766 146 774 150 C786 155 798 157 808 160 C816 162 822 166 825 172 C828 182 829 198 827 212 C825 224 821 233 814 238 L788 243 C778 247 766 249 754 249 L726 250 A 70 70 0 0 0 586 250 L560 252 C520 253 480 253 440 252 L322 252 A 70 70 0 0 0 182 252 L118 250 C100 249 84 248 75 246 Z"/></clipPath>
-<clipPath id="glassClip"><path d="M416 163 C446 147 480 131 510 120 C530 113 548 109 564 108 C590 102 620 101 646 102 C668 103 688 107 706 114 C718 121 730 128 740 136 L742 139 C716 142 690 144 660 146 C600 151 520 158 460 162 C444 163 428 164 416 163 Z"/></clipPath>
+<clipPath id="bodyClip"><path d="M62 246 C54 243 50 236 50 228 C50 220 52 213 57 208 C63 200 72 194 84 189 C100 181 120 174 142 170 C164 167 188 166 212 166 C240 165 268 164 294 164 C308 164 320 165 330 167 C352 148 374 130 396 115 C406 108 416 103 428 99 C444 90 462 82 482 76 C496 72 512 70 528 70 C548 70 566 73 582 79 C598 87 610 98 620 110 C626 118 632 126 638 133 C666 143 698 153 726 160 C740 163 750 164 758 167 C766 170 771 175 773 181 C776 190 777 202 775 213 C773 224 768 232 761 237 L744 242 C737 245 731 246 727 247 L726 247 A 70 70 0 0 0 586 247 L560 249 C520 250 480 250 440 249 L322 249 A 70 70 0 0 0 182 249 L140 248 C112 248 76 247 62 246 Z"/></clipPath>
+<clipPath id="glassClip"><path d="M338 165 C358 148 380 130 400 116 C410 108 420 103 432 100 C448 91 466 84 486 79 C500 75 516 74 530 74 C548 74 564 77 578 83 C592 90 604 100 612 111 L614 114 C560 130 480 150 410 161 C384 164 358 165 338 165 Z"/></clipPath>
 </defs>
 <g class="body-bob">
-<path d="M104 186 L-20 168 v52 z" fill="#E8D9A0" opacity=".25"/>
-<!-- スワンネックウイング -->
-<path d="M778 156 C774 140 777 126 786 117 L796 117 C788 127 785 141 789 154 Z" fill="#1A1C20"/>
-<path d="M806 152 C803 138 806 126 814 117 L823 117 C816 127 813 139 816 150 Z" fill="#1A1C20"/>
-<path d="M745 116 L826 108 L830 120 L749 128 Z" fill="url(#wingG)" stroke="#5E0A1C" stroke-width="2"/>
-<path d="M746 116 L826 108 L827 112 L747 120 Z" fill="#E88A9C" opacity=".55"/>
-<!-- ボディ（写真トレース輪郭） -->
-<path d="M75 246 C66 243 62 235 62 226 C62 219 64 213 68 209 C74 202 84 196 96 192 C114 184 138 177 164 172 C192 165 224 159 252 157 C282 155 312 156 338 159 C362 161 386 163 404 166 C436 152 470 133 504 120 C522 112 542 106 558 103 C586 97 616 94 644 96 C670 97 694 101 716 108 C728 115 740 123 750 132 C758 139 766 146 774 150 C786 155 798 157 808 160 C816 162 822 166 825 172 C828 182 829 198 827 212 C825 224 821 233 814 238 L788 243 C778 247 766 249 754 249 L726 250 A 70 70 0 0 0 586 250 L560 252 C520 253 480 253 440 252 L322 252 A 70 70 0 0 0 182 252 L118 250 C100 249 84 248 75 246 Z" fill="url(#bodyG)" stroke="#4E0817" stroke-width="2.5"/>
+<path d="M95 182 L-20 165 v50 z" fill="#E8D9A0" opacity=".25"/>
+<!-- ウイング（ボディ同色・スワンネック） -->
+<path d="M670 146 C666 132 669 122 678 114 L688 114 C680 124 677 136 681 144 Z" fill="#1A1C20"/>
+<path d="M710 154 C707 140 710 128 718 118 L727 118 C720 128 717 140 720 150 Z" fill="#1A1C20"/>
+<path d="M620 114 L778 102 L782 114 L624 126 Z" fill="url(#wingG)" stroke="#5E0A1C" stroke-width="2"/>
+<path d="M621 114 L778 102 L779 106 L622 118 Z" fill="#E88A9C" opacity=".55"/>
+<!-- ボディ -->
+<path d="M62 246 C54 243 50 236 50 228 C50 220 52 213 57 208 C63 200 72 194 84 189 C100 181 120 174 142 170 C164 167 188 166 212 166 C240 165 268 164 294 164 C308 164 320 165 330 167 C352 148 374 130 396 115 C406 108 416 103 428 99 C444 90 462 82 482 76 C496 72 512 70 528 70 C548 70 566 73 582 79 C598 87 610 98 620 110 C626 118 632 126 638 133 C666 143 698 153 726 160 C740 163 750 164 758 167 C766 170 771 175 773 181 C776 190 777 202 775 213 C773 224 768 232 761 237 L744 242 C737 245 731 246 727 247 L726 247 A 70 70 0 0 0 586 247 L560 249 C520 250 480 250 440 249 L322 249 A 70 70 0 0 0 182 249 L140 248 C112 248 76 247 62 246 Z" fill="url(#bodyG)" stroke="#4E0817" stroke-width="2.5"/>
 <g clip-path="url(#bodyClip)">
-  <rect x="50" y="222" width="850" height="40" fill="#000" opacity=".32"/>
-  <circle cx="252" cy="248" r="74" fill="none" stroke="#000" stroke-width="14" opacity=".4"/>
-  <circle cx="656" cy="248" r="74" fill="none" stroke="#000" stroke-width="14" opacity=".4"/>
-  <path d="M96 194 C150 178 220 165 300 160 L300 167 C224 170 154 182 100 198 Z" fill="#FFF" opacity=".12"/>
-  <path d="M420 168 C510 162 620 154 730 147 L730 152 C620 160 510 168 420 173 Z" fill="#FFF" opacity=".10"/>
-  <path d="M556 152 C596 142 640 136 686 138 C712 140 734 146 750 154 L748 158 C730 150 710 145 686 143 C642 141 598 147 560 156 Z" fill="#FFF" opacity=".10"/>
-  <rect x="50" y="150" width="34" height="110" fill="#000" opacity=".16"/>
+  <rect x="40" y="220" width="850" height="40" fill="#000" opacity=".32"/>
+  <circle cx="252" cy="247" r="74" fill="none" stroke="#000" stroke-width="14" opacity=".4"/>
+  <circle cx="656" cy="247" r="74" fill="none" stroke="#000" stroke-width="14" opacity=".4"/>
+  <path d="M84 191 C130 178 190 168 260 166 L260 172 C194 174 136 184 88 197 Z" fill="#FFF" opacity=".12"/>
+  <path d="M348 168 C430 161 530 152 600 146 L600 151 C530 158 430 167 348 173 Z" fill="#FFF" opacity=".10"/>
+  <path d="M440 92 C480 78 528 73 570 76 L570 81 C530 78 486 83 450 96 Z" fill="#FFF" opacity=".12"/>
+  <path d="M576 132 C612 138 652 146 690 152 C714 156 734 160 748 166 L746 170 C730 163 710 159 688 156 C650 150 612 142 574 136 Z" fill="#FFF" opacity=".10"/>
+  <rect x="44" y="150" width="28" height="100" fill="#000" opacity=".16"/>
 </g>
 <!-- パネルシーム（フランク・ドア） -->
 <g fill="none" stroke="#6E0E20" stroke-width="1.8" opacity=".9">
-  <path d="M176 180 C232 163 292 157 348 160"/>
-  <path d="M432 168 C430 196 430 224 433 250"/>
-  <path d="M570 152 C570 184 572 218 576 248"/>
+  <path d="M140 175 C190 163 245 159 300 162"/>
+  <path d="M356 168 C354 195 354 222 356 248"/>
+  <path d="M508 152 C510 184 512 216 514 246"/>
 </g>
 <!-- DLOガラス -->
-<path d="M416 163 C446 147 480 131 510 120 C530 113 548 109 564 108 C590 102 620 101 646 102 C668 103 688 107 706 114 C718 121 730 128 740 136 L742 139 C716 142 690 144 660 146 C600 151 520 158 460 162 C444 163 428 164 416 163 Z" fill="url(#glassG)" stroke="#98A0AA" stroke-width="2"/>
+<path d="M338 165 C358 148 380 130 400 116 C410 108 420 103 432 100 C448 91 466 84 486 79 C500 75 516 74 530 74 C548 74 564 77 578 83 C592 90 604 100 612 111 L614 114 C560 130 480 150 410 161 C384 164 358 165 338 165 Z" fill="url(#glassG)" stroke="#98A0AA" stroke-width="2"/>
 <g clip-path="url(#glassClip)">
-  <path d="M470 130 L502 122 L448 164 L420 164 Z" fill="#FFF" opacity=".14"/>
-  <path d="M560 108 L580 107 L520 158 L498 160 Z" fill="#FFF" opacity=".10"/>
+  <path d="M400 118 L432 102 L372 162 L346 165 Z" fill="#FFF" opacity=".14"/>
+  <path d="M482 80 L502 76 L436 156 L414 160 Z" fill="#FFF" opacity=".10"/>
 </g>
-<line x1="660" y1="107" x2="668" y2="145" stroke="#38424C" stroke-width="3"/>
+<line x1="552" y1="77" x2="564" y2="126" stroke="#38424C" stroke-width="3"/>
 <!-- リアクォーターインテーク -->
-<path d="M582 196 L640 188 L650 244 L596 249 Z" fill="#0C0D10"/>
-<path d="M590 202 L636 196 M592 216 L640 210 M594 230 L644 224" stroke="#1E2126" stroke-width="3" fill="none"/>
-<path d="M582 196 L640 188 L641 193 L583 201 Z" fill="#FFF" opacity=".12"/>
+<path d="M528 182 L586 174 L596 228 L542 234 Z" fill="#0C0D10"/>
+<path d="M536 188 L582 182 M538 202 L586 196 M540 216 L590 210" stroke="#1E2126" stroke-width="3" fill="none"/>
+<path d="M528 182 L586 174 L587 179 L529 187 Z" fill="#FFF" opacity=".12"/>
 <!-- ドアハンドル・ミラー -->
-<rect x="494" y="168" width="26" height="7" rx="3.5" fill="#C43350" stroke="#7C1024" stroke-width="1.2"/>
-<path d="M424 162 L415 153" stroke="#1A1C20" stroke-width="3"/>
-<rect x="398" y="145" width="20" height="12" rx="4" fill="#B91F3B" stroke="#7C1024" stroke-width="1.2" transform="rotate(-12 408 151)"/>
-<rect x="399" y="148" width="9" height="7" rx="2" fill="#141A20" transform="rotate(-12 403 151)"/>
+<rect x="420" y="172" width="26" height="7" rx="3.5" fill="#C43350" stroke="#7C1024" stroke-width="1.2"/>
+<path d="M344 160 L335 151" stroke="#1A1C20" stroke-width="3"/>
+<rect x="318" y="143" width="20" height="12" rx="4" fill="#B91F3B" stroke="#7C1024" stroke-width="1.2" transform="rotate(-12 328 149)"/>
+<rect x="319" y="146" width="9" height="7" rx="2" fill="#141A20" transform="rotate(-12 323 149)"/>
 <!-- フロント：ヘッドライト・インテーク・スプリッター -->
-<path d="M120 208 C118 200 122 192 130 188 C144 182 158 179 168 181 C174 183 176 188 173 193 C166 202 148 210 132 212 C127 212 122 211 120 208 Z" fill="#E8D9A0" stroke="#B9A75E" stroke-width="2"/>
-<circle cx="138" cy="197" r="5.5" fill="#FFF7DE" stroke="#8A7A3C" stroke-width="1.5"/>
-<circle cx="157" cy="190" r="4.5" fill="#FFF7DE" stroke="#8A7A3C" stroke-width="1.2"/>
-<path d="M76 219 L128 213 L132 238 L80 242 Z" fill="#0C0D10"/>
-<path d="M82 222 L126 217 M83 230 L128 225" stroke="#1E2126" stroke-width="2.5" fill="none"/>
-<path d="M64 240 L160 240 L166 248 L72 250 Z" fill="#050607"/>
+<path d="M88 190 C86 183 89 176 97 172 C109 167 123 164 133 166 C138 168 139 173 136 178 C130 186 114 193 100 194 C94 194 90 193 88 190 Z" fill="#E8D9A0" stroke="#B9A75E" stroke-width="2"/>
+<circle cx="104" cy="181" r="5" fill="#FFF7DE" stroke="#8A7A3C" stroke-width="1.5"/>
+<circle cx="122" cy="174" r="4" fill="#FFF7DE" stroke="#8A7A3C" stroke-width="1.2"/>
+<path d="M56 216 L104 210 L108 235 L60 240 Z" fill="#0C0D10"/>
+<path d="M62 219 L102 214 M63 227 L104 222" stroke="#1E2126" stroke-width="2.5" fill="none"/>
+<path d="M44 240 L130 240 L136 248 L52 250 Z" fill="#050607"/>
 <!-- リア：テールランプ・ディフューザー -->
-<path d="M796 168 C806 166 816 166 823 169 L824 184 C817 181 807 180 797 182 Z" fill="#F35B45" opacity=".5" filter="url(#softG)"/>
-<path d="M796 168 C806 166 816 166 823 169 L824 184 C817 181 807 180 797 182 Z" fill="#F35B45" stroke="#A03428" stroke-width="1"/>
-<path d="M752 240 L810 236 C814 244 811 250 803 252 L758 254 C752 250 750 245 752 240 Z" fill="#0C0D10"/>
-<path d="M766 242 L766 252 M780 241 L780 251 M794 240 L794 250" stroke="#1E2126" stroke-width="2.5" fill="none"/>
+<path d="M730 170 C742 168 756 168 764 171 L765 186 C756 183 742 182 731 184 Z" fill="#F35B45" opacity=".5" filter="url(#softG)"/>
+<path d="M730 170 C742 168 756 168 764 171 L765 186 C756 183 742 182 731 184 Z" fill="#F35B45" stroke="#A03428" stroke-width="1"/>
+<path d="M706 240 L756 236 C760 243 757 248 749 250 L712 251 C706 248 704 244 706 240 Z" fill="#0C0D10"/>
+<path d="M718 241 L718 250 M731 240 L731 249 M744 239 L744 248" stroke="#1E2126" stroke-width="2.5" fill="none"/>
 <!-- ロッカー -->
-<path d="M330 248 L566 250 L566 255 L330 254 Z" fill="#0C0D10"/>
+<path d="M300 245 L560 247 L560 252 L300 250 Z" fill="#0C0D10"/>
 </g>
 <g>
 <circle cx="252" cy="240" r="52.0" fill="url(#tireG)"/>
