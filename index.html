@@ -78,154 +78,13 @@
 
   <!-- ======================= ファーストビュー ======================= -->
   <section class="hero">
-    <!-- 3D走行シーン：車は定位置でホイールのみ回転し、路面・光跡が後方へ流れる -->
+    <!-- 走行シーン：実写写真＋流れる光のアニメーション -->
     <div class="hero__bg hero3d" aria-hidden="true">
+      <picture class="hero3d__photo">
+        <source media="(max-width: 640px)" srcset="assets/img/hero-top.png">
+        <img src="assets/img/hero-wide.png" alt="">
+      </picture>
       <div class="hero3d__streaks"><i class="s1"></i><i class="s2"></i><i class="s3"></i><i class="s4"></i><i class="s5"></i><i class="s6"></i></div>
-      <div class="hero3d__road">
-        <div class="hero3d__lane"></div>
-      </div>
-      <svg class="hero3d__car" viewBox="0 0 900 320">
-        <!-- 右向き表示のため左右反転 -->
-        <g transform="translate(900 0) scale(-1 1)">
-        <ellipse cx="420" cy="296" rx="350" ry="14" fill="#000" opacity=".6"/>
-        <!-- 車体：PORSCHE Cayman GT4／カーマインレッド（オーナー車実写重ね合わせ版） -->
-<defs>
-<linearGradient id="bodyG" x1="0" y1="68" x2="0" y2="292" gradientUnits="userSpaceOnUse">
-  <stop offset="0" stop-color="#E25A74"/>
-  <stop offset=".16" stop-color="#C93B57"/>
-  <stop offset=".45" stop-color="#AB1631"/>
-  <stop offset=".78" stop-color="#7C1024"/>
-  <stop offset="1" stop-color="#4E0817"/>
-</linearGradient>
-<linearGradient id="glassG" x1="0" y1="72" x2="0" y2="166" gradientUnits="userSpaceOnUse">
-  <stop offset="0" stop-color="#5A6E84"/>
-  <stop offset=".45" stop-color="#22303E"/>
-  <stop offset="1" stop-color="#0C1319"/>
-</linearGradient>
-<linearGradient id="wingG" x1="0" y1="100" x2="0" y2="128" gradientUnits="userSpaceOnUse">
-  <stop offset="0" stop-color="#D64C66"/>
-  <stop offset=".5" stop-color="#AB1631"/>
-  <stop offset="1" stop-color="#6E0E20"/>
-</linearGradient>
-<radialGradient id="tireG">
-  <stop offset=".55" stop-color="#131418"/>
-  <stop offset=".8" stop-color="#212329"/>
-  <stop offset=".93" stop-color="#0B0C0E"/>
-  <stop offset="1" stop-color="#050506"/>
-</radialGradient>
-<linearGradient id="rimG" x1="0" y1="0" x2="1" y2="1">
-  <stop offset="0" stop-color="#EED98B"/>
-  <stop offset=".5" stop-color="#C9A227"/>
-  <stop offset="1" stop-color="#8A6E16"/>
-</linearGradient>
-<filter id="softG" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="6"/></filter>
-<clipPath id="bodyClip"><path d="M62 246 C54 243 50 236 50 228 C50 220 52 213 57 208 C63 200 72 194 84 189 C100 181 120 174 142 170 C164 167 188 166 212 166 C240 165 268 164 294 164 C308 164 320 165 330 167 C352 148 374 130 396 115 C406 108 416 103 428 99 C444 90 462 82 482 76 C496 72 512 70 528 70 C548 70 566 73 582 79 C598 87 610 98 620 110 C626 118 632 126 638 133 C666 143 698 153 726 160 C740 163 750 164 758 167 C766 170 771 175 773 181 C776 190 777 202 775 213 C773 224 768 232 761 237 L744 242 C737 245 731 246 727 247 L726 247 A 70 70 0 0 0 586 247 L560 249 C520 250 480 250 440 249 L322 249 A 70 70 0 0 0 182 249 L140 248 C112 248 76 247 62 246 Z"/></clipPath>
-<clipPath id="glassClip"><path d="M338 165 C358 148 380 130 400 116 C410 108 420 103 432 100 C448 91 466 84 486 79 C500 75 516 74 530 74 C548 74 564 77 578 83 C592 90 604 100 612 111 L614 114 C560 130 480 150 410 161 C384 164 358 165 338 165 Z"/></clipPath>
-</defs>
-<g class="body-bob">
-<path d="M95 182 L-20 165 v50 z" fill="#E8D9A0" opacity=".25"/>
-<!-- ウイング（ボディ同色・スワンネック） -->
-<path d="M670 146 C666 132 669 122 678 114 L688 114 C680 124 677 136 681 144 Z" fill="#1A1C20"/>
-<path d="M710 154 C707 140 710 128 718 118 L727 118 C720 128 717 140 720 150 Z" fill="#1A1C20"/>
-<path d="M620 114 L778 102 L782 114 L624 126 Z" fill="url(#wingG)" stroke="#5E0A1C" stroke-width="2"/>
-<path d="M621 114 L778 102 L779 106 L622 118 Z" fill="#E88A9C" opacity=".55"/>
-<!-- ボディ -->
-<path d="M62 246 C54 243 50 236 50 228 C50 220 52 213 57 208 C63 200 72 194 84 189 C100 181 120 174 142 170 C164 167 188 166 212 166 C240 165 268 164 294 164 C308 164 320 165 330 167 C352 148 374 130 396 115 C406 108 416 103 428 99 C444 90 462 82 482 76 C496 72 512 70 528 70 C548 70 566 73 582 79 C598 87 610 98 620 110 C626 118 632 126 638 133 C666 143 698 153 726 160 C740 163 750 164 758 167 C766 170 771 175 773 181 C776 190 777 202 775 213 C773 224 768 232 761 237 L744 242 C737 245 731 246 727 247 L726 247 A 70 70 0 0 0 586 247 L560 249 C520 250 480 250 440 249 L322 249 A 70 70 0 0 0 182 249 L140 248 C112 248 76 247 62 246 Z" fill="url(#bodyG)" stroke="#4E0817" stroke-width="2.5"/>
-<g clip-path="url(#bodyClip)">
-  <rect x="40" y="220" width="850" height="40" fill="#000" opacity=".32"/>
-  <circle cx="252" cy="247" r="74" fill="none" stroke="#000" stroke-width="14" opacity=".4"/>
-  <circle cx="656" cy="247" r="74" fill="none" stroke="#000" stroke-width="14" opacity=".4"/>
-  <path d="M84 191 C130 178 190 168 260 166 L260 172 C194 174 136 184 88 197 Z" fill="#FFF" opacity=".12"/>
-  <path d="M348 168 C430 161 530 152 600 146 L600 151 C530 158 430 167 348 173 Z" fill="#FFF" opacity=".10"/>
-  <path d="M440 92 C480 78 528 73 570 76 L570 81 C530 78 486 83 450 96 Z" fill="#FFF" opacity=".12"/>
-  <path d="M576 132 C612 138 652 146 690 152 C714 156 734 160 748 166 L746 170 C730 163 710 159 688 156 C650 150 612 142 574 136 Z" fill="#FFF" opacity=".10"/>
-  <rect x="44" y="150" width="28" height="100" fill="#000" opacity=".16"/>
-</g>
-<!-- パネルシーム（フランク・ドア） -->
-<g fill="none" stroke="#6E0E20" stroke-width="1.8" opacity=".9">
-  <path d="M140 175 C190 163 245 159 300 162"/>
-  <path d="M356 168 C354 195 354 222 356 248"/>
-  <path d="M508 152 C510 184 512 216 514 246"/>
-</g>
-<!-- DLOガラス -->
-<path d="M338 165 C358 148 380 130 400 116 C410 108 420 103 432 100 C448 91 466 84 486 79 C500 75 516 74 530 74 C548 74 564 77 578 83 C592 90 604 100 612 111 L614 114 C560 130 480 150 410 161 C384 164 358 165 338 165 Z" fill="url(#glassG)" stroke="#98A0AA" stroke-width="2"/>
-<g clip-path="url(#glassClip)">
-  <path d="M400 118 L432 102 L372 162 L346 165 Z" fill="#FFF" opacity=".14"/>
-  <path d="M482 80 L502 76 L436 156 L414 160 Z" fill="#FFF" opacity=".10"/>
-</g>
-<line x1="552" y1="77" x2="564" y2="126" stroke="#38424C" stroke-width="3"/>
-<!-- リアクォーターインテーク -->
-<path d="M528 182 L586 174 L596 228 L542 234 Z" fill="#0C0D10"/>
-<path d="M536 188 L582 182 M538 202 L586 196 M540 216 L590 210" stroke="#1E2126" stroke-width="3" fill="none"/>
-<path d="M528 182 L586 174 L587 179 L529 187 Z" fill="#FFF" opacity=".12"/>
-<!-- ドアハンドル・ミラー -->
-<rect x="420" y="172" width="26" height="7" rx="3.5" fill="#C43350" stroke="#7C1024" stroke-width="1.2"/>
-<path d="M344 160 L335 151" stroke="#1A1C20" stroke-width="3"/>
-<rect x="318" y="143" width="20" height="12" rx="4" fill="#B91F3B" stroke="#7C1024" stroke-width="1.2" transform="rotate(-12 328 149)"/>
-<rect x="319" y="146" width="9" height="7" rx="2" fill="#141A20" transform="rotate(-12 323 149)"/>
-<!-- フロント：ヘッドライト・インテーク・スプリッター -->
-<path d="M88 190 C86 183 89 176 97 172 C109 167 123 164 133 166 C138 168 139 173 136 178 C130 186 114 193 100 194 C94 194 90 193 88 190 Z" fill="#E8D9A0" stroke="#B9A75E" stroke-width="2"/>
-<circle cx="104" cy="181" r="5" fill="#FFF7DE" stroke="#8A7A3C" stroke-width="1.5"/>
-<circle cx="122" cy="174" r="4" fill="#FFF7DE" stroke="#8A7A3C" stroke-width="1.2"/>
-<path d="M56 216 L104 210 L108 235 L60 240 Z" fill="#0C0D10"/>
-<path d="M62 219 L102 214 M63 227 L104 222" stroke="#1E2126" stroke-width="2.5" fill="none"/>
-<path d="M44 240 L130 240 L136 248 L52 250 Z" fill="#050607"/>
-<!-- リア：テールランプ・ディフューザー -->
-<path d="M730 170 C742 168 756 168 764 171 L765 186 C756 183 742 182 731 184 Z" fill="#F35B45" opacity=".5" filter="url(#softG)"/>
-<path d="M730 170 C742 168 756 168 764 171 L765 186 C756 183 742 182 731 184 Z" fill="#F35B45" stroke="#A03428" stroke-width="1"/>
-<path d="M706 240 L756 236 C760 243 757 248 749 250 L712 251 C706 248 704 244 706 240 Z" fill="#0C0D10"/>
-<path d="M718 241 L718 250 M731 240 L731 249 M744 239 L744 248" stroke="#1E2126" stroke-width="2.5" fill="none"/>
-<!-- ロッカー -->
-<path d="M300 245 L560 247 L560 252 L300 250 Z" fill="#0C0D10"/>
-</g>
-<g>
-<circle cx="252" cy="240" r="52.0" fill="url(#tireG)"/>
-<circle cx="252" cy="240" r="52.0" fill="none" stroke="#000" stroke-width="1.3" opacity=".6"/>
-<circle cx="252" cy="240" r="34.4" fill="#08090B"/>
-<circle cx="252" cy="240" r="21.1" fill="#575B60"/>
-<circle cx="252" cy="240" r="21.1" fill="none" stroke="#3E4247" stroke-width="1.8"/>
-<circle cx="252" cy="240" r="11.6" fill="#34373B"/>
-<rect x="228.2" y="232.1" width="6.2" height="15.9" rx="2.6" fill="#C9A227" stroke="#7E6414" stroke-width="1.1"/>
-<g class="wheel">
-<circle cx="252" cy="240" r="31.7" fill="none" stroke="url(#rimG)" stroke-width="4.0"/>
-<line x1="259.4" y1="241.3" x2="282.3" y2="237.9" stroke="url(#rimG)" stroke-width="2.8" stroke-linecap="round"/>
-<line x1="257.2" y1="245.4" x2="277.8" y2="256.1" stroke="url(#rimG)" stroke-width="2.8" stroke-linecap="round"/>
-<line x1="253.0" y1="247.4" x2="263.4" y2="268.2" stroke="url(#rimG)" stroke-width="2.8" stroke-linecap="round"/>
-<line x1="248.5" y1="246.6" x2="244.6" y2="269.5" stroke="url(#rimG)" stroke-width="2.8" stroke-linecap="round"/>
-<line x1="245.3" y1="243.3" x2="228.7" y2="259.5" stroke="url(#rimG)" stroke-width="2.8" stroke-linecap="round"/>
-<line x1="244.6" y1="238.7" x2="221.7" y2="242.1" stroke="url(#rimG)" stroke-width="2.8" stroke-linecap="round"/>
-<line x1="246.8" y1="234.6" x2="226.2" y2="223.9" stroke="url(#rimG)" stroke-width="2.8" stroke-linecap="round"/>
-<line x1="251.0" y1="232.6" x2="240.6" y2="211.8" stroke="url(#rimG)" stroke-width="2.8" stroke-linecap="round"/>
-<line x1="255.5" y1="233.4" x2="259.4" y2="210.5" stroke="url(#rimG)" stroke-width="2.8" stroke-linecap="round"/>
-<line x1="258.7" y1="236.7" x2="275.3" y2="220.5" stroke="url(#rimG)" stroke-width="2.8" stroke-linecap="round"/>
-<circle cx="252" cy="240" r="7.5" fill="#C9A227" stroke="#7E6414" stroke-width="1.3"/>
-<circle cx="252" cy="240" r="3.1" fill="#3A3020"/>
-</g></g>
-<g>
-<circle cx="656" cy="240" r="52.0" fill="url(#tireG)"/>
-<circle cx="656" cy="240" r="52.0" fill="none" stroke="#000" stroke-width="1.3" opacity=".6"/>
-<circle cx="656" cy="240" r="34.4" fill="#08090B"/>
-<circle cx="656" cy="240" r="21.1" fill="#575B60"/>
-<circle cx="656" cy="240" r="21.1" fill="none" stroke="#3E4247" stroke-width="1.8"/>
-<circle cx="656" cy="240" r="11.6" fill="#34373B"/>
-<rect x="632.2" y="232.1" width="6.2" height="15.9" rx="2.6" fill="#C9A227" stroke="#7E6414" stroke-width="1.1"/>
-<g class="wheel">
-<circle cx="656" cy="240" r="31.7" fill="none" stroke="url(#rimG)" stroke-width="4.0"/>
-<line x1="663.4" y1="241.3" x2="686.3" y2="237.9" stroke="url(#rimG)" stroke-width="2.8" stroke-linecap="round"/>
-<line x1="661.2" y1="245.4" x2="681.8" y2="256.1" stroke="url(#rimG)" stroke-width="2.8" stroke-linecap="round"/>
-<line x1="657.0" y1="247.4" x2="667.4" y2="268.2" stroke="url(#rimG)" stroke-width="2.8" stroke-linecap="round"/>
-<line x1="652.5" y1="246.6" x2="648.6" y2="269.5" stroke="url(#rimG)" stroke-width="2.8" stroke-linecap="round"/>
-<line x1="649.3" y1="243.3" x2="632.7" y2="259.5" stroke="url(#rimG)" stroke-width="2.8" stroke-linecap="round"/>
-<line x1="648.6" y1="238.7" x2="625.7" y2="242.1" stroke="url(#rimG)" stroke-width="2.8" stroke-linecap="round"/>
-<line x1="650.8" y1="234.6" x2="630.2" y2="223.9" stroke="url(#rimG)" stroke-width="2.8" stroke-linecap="round"/>
-<line x1="655.0" y1="232.6" x2="644.6" y2="211.8" stroke="url(#rimG)" stroke-width="2.8" stroke-linecap="round"/>
-<line x1="659.5" y1="233.4" x2="663.4" y2="210.5" stroke="url(#rimG)" stroke-width="2.8" stroke-linecap="round"/>
-<line x1="662.7" y1="236.7" x2="679.3" y2="220.5" stroke="url(#rimG)" stroke-width="2.8" stroke-linecap="round"/>
-<circle cx="656" cy="240" r="7.5" fill="#C9A227" stroke="#7E6414" stroke-width="1.3"/>
-<circle cx="656" cy="240" r="3.1" fill="#3A3020"/>
-</g></g>
-        </g>
-      </svg>
     </div>
     <div class="hero__inner">
       <h1 class="hero__logo">
@@ -253,7 +112,7 @@
       <div class="service-row service-row--feature reveal">
         <div class="service-row__media">
           <span class="service-row__badge">最重要サービス</span>
-          <img src="assets/img/towing.svg" alt="高級車をレッカー搬送するTRIDENT COMPANYのレッカー車">
+          <img src="assets/img/towing.png" alt="高級車をレッカー搬送するTRIDENT COMPANYのレッカー車">
         </div>
         <div class="service-row__body">
           <span class="service-row__en">24H / 365 Days</span>
@@ -280,7 +139,7 @@
 
       <!-- 整備・修理 -->
       <div class="service-row reveal">
-        <div class="service-row__media"><img src="assets/img/maintenance.svg" alt="輸入車を整備するTRIDENT COMPANYの工場"></div>
+        <div class="service-row__media"><img src="assets/img/maintenance.png" alt="輸入車を整備するTRIDENT COMPANYの工場"></div>
         <div class="service-row__body">
           <span class="service-row__en">Maintenance & Repair</span>
           <h3 class="service-row__title">整備・修理｜外車もお任せ</h3>
@@ -293,7 +152,7 @@
 
       <!-- 板金・塗装 -->
       <div class="service-row service-row--reverse reveal">
-        <div class="service-row__media"><img src="assets/img/bodywork.svg" alt="板金塗装作業中の車両"></div>
+        <div class="service-row__media"><img src="assets/img/bodywork.png" alt="板金塗装作業中の車両"></div>
         <div class="service-row__body">
           <span class="service-row__en">Bodywork & Paint</span>
           <h3 class="service-row__title">板金・塗装｜保険修理対応</h3>
@@ -306,7 +165,7 @@
 
       <!-- カスタム -->
       <div class="service-row reveal">
-        <div class="service-row__media"><img src="assets/img/custom.svg" alt="カスタムされたスポーツカー"></div>
+        <div class="service-row__media"><img src="assets/img/custom.png" alt="カスタムされたスポーツカー"></div>
         <div class="service-row__body">
           <span class="service-row__en">Custom</span>
           <h3 class="service-row__title">カスタム｜持込パーツも相談可</h3>
@@ -319,7 +178,7 @@
 
       <!-- 販売・買取 -->
       <div class="service-row service-row--reverse reveal">
-        <div class="service-row__media"><img src="assets/img/sales.svg" alt="展示された車両"></div>
+        <div class="service-row__media"><img src="assets/img/sales.png" alt="展示された車両"></div>
         <div class="service-row__body">
           <span class="service-row__en">Sales & Purchase</span>
           <h3 class="service-row__title">販売・買取｜注文販売＆無料査定</h3>
@@ -382,12 +241,12 @@
       </div>
       <!-- 本番は Smash Balloon で公式フィードを表示（検討事項 D-3）。ここではダミー配置 -->
       <div class="ig-grid reveal">
-        <a href="https://www.instagram.com/car_20555/" target="_blank" rel="noopener"><img src="assets/img/custom-2.svg" alt="Instagram投稿"></a>
-        <a href="https://www.instagram.com/car_20555/" target="_blank" rel="noopener"><img src="assets/img/sales-2.svg" alt="Instagram投稿"></a>
-        <a href="https://www.instagram.com/car_20555/" target="_blank" rel="noopener"><img src="assets/img/hero-portrait.svg" alt="Instagram投稿"></a>
-        <a href="https://www.instagram.com/car_20555/" target="_blank" rel="noopener"><img src="assets/img/maintenance.svg" alt="Instagram投稿"></a>
-        <a href="https://www.instagram.com/car_20555/" target="_blank" rel="noopener"><img src="assets/img/bodywork.svg" alt="Instagram投稿"></a>
-        <a href="https://www.instagram.com/car_20555/" target="_blank" rel="noopener"><img src="assets/img/towing.svg" alt="Instagram投稿"></a>
+        <a href="https://www.instagram.com/car_20555/" target="_blank" rel="noopener"><img src="assets/img/custom-2.png" alt="Instagram投稿"></a>
+        <a href="https://www.instagram.com/car_20555/" target="_blank" rel="noopener"><img src="assets/img/sales-2.png" alt="Instagram投稿"></a>
+        <a href="https://www.instagram.com/car_20555/" target="_blank" rel="noopener"><img src="assets/img/hero-portrait.png" alt="Instagram投稿"></a>
+        <a href="https://www.instagram.com/car_20555/" target="_blank" rel="noopener"><img src="assets/img/maintenance.png" alt="Instagram投稿"></a>
+        <a href="https://www.instagram.com/car_20555/" target="_blank" rel="noopener"><img src="assets/img/bodywork.png" alt="Instagram投稿"></a>
+        <a href="https://www.instagram.com/car_20555/" target="_blank" rel="noopener"><img src="assets/img/towing.png" alt="Instagram投稿"></a>
       </div>
       <div class="ig-note">
         <a href="https://www.instagram.com/car_20555/" target="_blank" rel="noopener" class="btn btn--ghost">@CAR_20555 をフォローする</a>
